@@ -1,0 +1,57 @@
+"Faithful of the Church of Humanity Unchained"
+={
+	name_list="Human2"
+	ship_prefix="MNS"
+	species_name="Masadan"
+	species_plural="Masadans"
+	species_class="MAM"
+	species_adjective="Masadan"
+	species_bio=""
+	portrait="human"
+	name="Faithful of the Church of Humanity Unchained"
+	adjective="Faithful"
+	government="divine_mandate"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Masada"
+	planet_class="pc_continental"
+	system_name="Endicott"
+	initializer="endicott_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { masada custom_start_screen }
+
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_19.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripes.dds"
+		}
+		colors={
+			"green"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Thomas Simonds"
+		portrait="human_male_03"
+		texture=0
+		hair=7
+		clothes=4
+		ruler_title="Chief Elder"
+	}
+	spawn_enabled=always
+	ethic="ethic_militarist"
+	ethic="ethic_fanatic_spiritualist"
+	trait="trait_conformists"
+	trait="trait_slow_learners"
+	trait="trait_repugnant"
+	trait="trait_industrious"
+}

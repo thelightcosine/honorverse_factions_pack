@@ -1,0 +1,56 @@
+manticore = {
+	name_list="Manticore"
+	ship_prefix="HMS"
+	species_name="Manticoran"
+	species_plural="Manticorans"
+	species_class="MAM"
+	species_adjective="Manticoran"
+	species_bio=""
+	portrait="human"
+	name="Star Kingdom of Manticore"
+	adjective="Manticoran"
+	government="manticoran_star_kingdom"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Manticore"
+	planet_class="pc_continental"
+	system_name="Manticore Binary System"
+	initializer="manticore_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { manticore custom_start_screen }
+	
+	empire_flag={
+		icon={
+			category="human"
+			file="flag_human_2.dds"
+		}
+		background={
+			category="backgrounds"
+			file="v.dds"
+		}
+		colors={
+			"red"
+			"orange"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Elizabeth Winton"
+		portrait="human_female_05"
+		texture=0
+		hair=1
+		clothes=4
+		ruler_title_female="Queen"
+	}
+	spawn_enabled=always
+	ethic="ethic_individualist"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_sedentary"
+	trait="trait_intelligent"
+	trait="trait_thrifty"
+	trait="trait_slow_breeders"
+}

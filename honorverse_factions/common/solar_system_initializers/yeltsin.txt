@@ -1,0 +1,238 @@
+# Yeltsin's Star
+
+yeltsin_system_initializer = {
+	name = "Yeltsin's Star"
+	
+	class = sc_f
+	asteroids_distance = 120
+	flags = { yeltsin_system }
+	usage = custom_empire		
+
+	planet = {
+		name = "Yeltsin's Star"
+		class = "pc_f_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		name = "Simiel"
+		class = "pc_molten"
+		orbit_distance = 18
+		size = { min = 8 max = 10 }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Cecitiel"
+		class = "pc_molten"
+		orbit_distance = 15
+		size = { min = 10 max = 12 }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Anael"
+		class = "pc_barren"
+		orbit_distance = 15
+		size = { min = 10 max = 14 }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Jophiel"
+		class = "pc_barren"
+		orbit_distance = 20
+		size = { min = 10 max = 14 }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Grayson"
+		class = "pc_continental"
+		orbit_distance = 20
+		size = { min = 16 max = 20 }
+		has_ring = no
+		home_planet = yes
+			tile_blockers = none
+			modifiers = none
+		
+			init_effect = {
+				prevent_anomaly = yes		
+			}
+
+			init_effect = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					set_building = "building_capital_1"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 1
+					}					
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_hydroponics_farm_1"
+						add_resource = {
+							resource = food
+							amount = 1
+							replace = yes
+						}						
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_power_plant_1"
+						add_resource = {
+							resource = energy
+							amount = 1
+							replace = yes
+						}						
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_power_plant_1"
+						add_resource = {
+							resource = energy
+							amount = 1
+							replace = yes
+						}						
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_mining_network_1"
+						add_resource = {
+							resource = minerals
+							amount = 1
+							replace = yes
+						}						
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = engineering_research
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = society_research
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = physics_research
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_toxic_kelp"
+					add_resource = {
+						resource = energy
+						amount = 2
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_toxic_kelp"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_toxic_kelp"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}				
+				}			
+			}	
+	}
+
+	change_orbit = 32
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = "pc_asteroid"
+		orbit_distance = 1
+		orbit_angle = { min = 30 max = 90 }
+	}
+
+	planet = {
+		name = "Uriel"
+		class = "pc_gas_giant"
+		orbit_distance = 60
+		size = 30
+		has_ring = no
+
+		moon = {
+			name = "Blackbird"
+			class = "pc_barren_cold"
+			orbit_distance = 12
+			size = 10
+		}
+	}
+
+	planet = {
+		name = "Raguel"
+		class = "pc_barren_cold"
+		orbit_distance = 15
+		size = { min = 10 max = 18 }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Remiel"
+		class = "pc_gas_giant"
+		orbit_distance = 20
+		size = 30
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Saraqael"
+		class = "pc_barren_cold"
+		orbit_distance = 15
+		size = { min = 10 max = 18 }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Zadkiel"
+		class = "pc_barren_cold"
+		orbit_distance = 15
+		size = { min = 10 max = 18 }
+		has_ring = no
+	}
+
+
+}

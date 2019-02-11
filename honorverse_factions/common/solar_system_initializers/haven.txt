@@ -1,0 +1,373 @@
+haven_system_initializer = {
+	name = "Haven"
+
+	asteroids_distance = 90
+
+	class = sc_g
+
+	flags = { haven_system }
+	usage = custom_empire
+
+	planet = {
+		name = "Haven"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 1 max = 2 } 
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+	
+	planet = {
+		name = "Haven"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = 90
+		size = { min = 16 max = 20 }
+		has_ring = no
+		home_planet = yes
+			tile_blockers = none
+			modifiers = none
+		
+			init_effect = {
+				prevent_anomaly = yes		
+			}
+
+			init_effect = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+					set_building = "building_capital_1"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}	
+					add_resource = {
+						resource = minerals
+						amount = 1
+					}					
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_hydroponics_farm_1"
+						add_resource = {
+							resource = food
+							amount = 1
+							replace = yes
+						}						
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_power_plant_1"
+						add_resource = {
+							resource = energy
+							amount = 1
+							replace = yes
+						}						
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_power_plant_1"
+						add_resource = {
+							resource = energy
+							amount = 1
+							replace = yes
+						}						
+					}
+					random_neighboring_tile = {
+						limit = { has_blocker = no has_building = no }
+						set_building = "building_mining_network_1"
+						add_resource = {
+							resource = minerals
+							amount = 1
+							replace = yes
+						}						
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = engineering_research
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = society_research
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_failing_infrastructure"
+					add_resource = {
+						resource = physics_research
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_decrepit_dwellings"
+					add_resource = {
+						resource = energy
+						amount = 2
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_decrepit_dwellings"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_decrepit_dwellings"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}				
+				}			
+			}	
+	}
+
+	planet = {
+		count = { min = 2 max = 5 } 
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 } 
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+
+		moon = {
+			count = { min= 0 max = 4 }
+		}
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "lovat_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "barnett_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 30 max = 100 }
+		initializer = "cerebrus_system_initializer"
+	}
+
+}
+
+
+lovat_system_initializer = {
+	name = "Lovat"
+
+	asteroids_distance = 90
+
+	class = sc_g
+
+	planet = {
+		name = "Lovat"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		name = "Furnace"
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 15 }
+	}
+
+	planet = {
+		name = "Forge"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Anvil"
+		class = "pc_barren_cold"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 15 }
+	}
+
+
+	planet = {
+		count = { min = 2 max = 5 } 
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 } 
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+
+		moon = {
+			count = { min= 0 max = 4 }
+		}
+	}	
+}
+
+
+cerebrus_system_initializer = {
+	name = "Cerebrus"
+
+	asteroids_distance = 90
+
+	class = sc_f
+
+	planet = {
+		name = "Cerebrus A"
+		class = "pc_f_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		name = "Cerebrus B"
+		class = "pc_g_star"
+		orbit_distance = 10
+		orbit_angle = 45
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		name = "Cerebrus C"
+		class = "pc_m_star"
+		orbit_distance = 10
+		orbit_angle = 90
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 1 max = 2 } 
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+
+	}
+	
+	planet = {
+		name = "Hades"
+		class = "pc_tropical"
+		orbit_distance = 20
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	change_orbit = 60
+
+	planet = {
+		count = { min = 1 max = 3 } 
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 2 } 
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+
+		moon = {
+			count = { min= 0 max = 4 }
+		}
+	}	
+}
+
+barnett_system_initializer = {
+	name = "Barnett"
+
+	class = sc_g
+
+	planet = {
+		name = "Barnett"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+	}
+
+	
+	planet = {
+		count = { min = 1 max = 2 } 
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+	
+	planet = {
+		name = "Enki"
+		class = "pc_continental"
+		orbit_distance = 20
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 1 max = 3 } 
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 2 } 
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+
+		moon = {
+			count = { min= 0 max = 4 }
+		}
+	}	
+}

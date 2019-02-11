@@ -1,0 +1,57 @@
+grayson = {
+	name_list="Grayson"
+	ship_prefix="GNS"
+	species_name="Grayson"
+	species_plural="Graysons"
+	species_class="MAM"
+	species_adjective="Grayson"
+	species_bio=""
+	portrait="human"
+	name="Protectorate of Grayson"
+	adjective="Grayson"
+	government="grayson_protectorate"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Grayson"
+	planet_class="pc_continental"
+	system_name="Yeltsin's Star"
+	initializer="yeltsin_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { grayson custom_start_screen }
+
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_20.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"orange"
+			"red"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Benjamin Mayhew"
+		portrait="human_male_04"
+		texture=0
+		hair=23
+		clothes=4
+		ruler_title="Protector"
+	}
+	spawn_enabled=always
+	ethic="ethic_individualist"
+	ethic="ethic_fanatic_spiritualist"
+	trait="trait_nonadaptive"
+	trait="trait_communal"
+	trait="trait_conformists"
+	trait="trait_fleeting"
+	trait="trait_agrarian"	
+}

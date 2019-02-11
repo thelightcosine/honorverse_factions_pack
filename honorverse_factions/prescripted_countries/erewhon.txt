@@ -1,0 +1,57 @@
+"Republic of Erewhon"
+={
+	name_list="Human"
+	ship_prefix=""
+	species_name="Erewhonese"
+	species_plural="Erewhonese"
+	species_class="MAM"
+	species_adjective="Erewhonese"
+	species_bio=""
+	portrait="human"
+	name="Republic of Erewhon"
+	adjective="Erewhonese"
+	government="plutocratic_oligarchy"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Erewhon"
+	planet_class="pc_continental"
+	system_name="Erewhon"
+	initializer="erewhon_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { erewhon custom_start_screen }
+
+	empire_flag={
+		icon={
+			category="pointy"
+			file="flag_pointy_22.dds"
+		}
+		background={
+			category="backgrounds"
+			file="pattern_01.dds"
+		}
+		colors={
+			"green"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Miriam Finks"
+		portrait="human_female_04"
+		texture=0
+		hair=0
+		clothes=0
+	}
+	spawn_enabled=always
+	ethic="ethic_xenophile"
+	ethic="ethic_pacifist"
+	ethic="ethic_materialist"
+	trait="trait_thrifty"
+	trait="trait_nonadaptive"
+	trait="trait_quick_learners"
+	trait="trait_communal"
+}

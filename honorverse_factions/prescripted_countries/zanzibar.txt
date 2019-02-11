@@ -1,0 +1,58 @@
+"Caliphate of Zanzibar"
+={
+	name_list="Human2"
+	ship_prefix=""
+	species_name="Zanzibaran"
+	species_plural="Zanzibarans"
+	species_class="MAM"
+	species_adjective="Zanzibaran"
+	species_bio=""
+	portrait="human"
+	name="Caliphate of Zanzibar"
+	adjective="Zanzibaran"
+	government="divine_mandate"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Zanzibar"
+	planet_class="pc_continental"
+	system_name="Zanzibar"
+	initializer="zanzibar_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { zanzibar custom_start_screen }
+
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_18.dds"
+		}
+		background={
+			category="backgrounds"
+			file="double_hemispheres.dds"
+		}
+		colors={
+			"orange"
+			"indigo"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Abbas Salman"
+		portrait="human_male_03"
+		texture=0
+		hair=11
+		clothes=3
+		ruler_title="Caliph"
+	}
+	spawn_enabled=always
+	ethic="ethic_xenophile"
+	ethic="ethic_pacifist"
+	ethic="ethic_spiritualist"
+	trait="trait_sedentary"
+	trait="trait_slow_learners"
+	trait="trait_agrarian"
+	trait="trait_conformists"
+}

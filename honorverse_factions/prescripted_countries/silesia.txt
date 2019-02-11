@@ -1,0 +1,57 @@
+"Silesian Confederacy"
+={
+	name_list="Human2"
+	ship_prefix=""
+	species_name="Silesian"
+	species_plural="Silesians"
+	species_class="MAM"
+	species_adjective="Silesian"
+	species_bio=""
+	portrait="human"
+	name="Silesian Confederacy"
+	adjective="Silesian"
+	government="indirect_democracy"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Silesia"
+	planet_class="pc_continental"
+	system_name="Silesia"
+	initializer="silesia_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { silesia custom_start_screen }
+
+	empire_flag={
+		icon={
+			category="zoological"
+			file="flag_zoological_5.dds"
+		}
+		background={
+			category="backgrounds"
+			file="triangle_split.dds"
+		}
+		colors={
+			"purple"
+			"orange"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Sharon Sorensen"
+		portrait="human_female_04"
+		texture=0
+		hair=4
+		clothes=4
+		ruler_title_female="Prime Minister"
+	}
+	spawn_enabled=always
+	ethic="ethic_fanatic_individualist"
+	ethic="ethic_materialist"
+	trait="trait_deviants"
+	trait="trait_slow_learners"
+	trait="trait_adaptive"
+	trait="trait_rapid_breeders"
+}

@@ -1,0 +1,56 @@
+mesa = {
+	name_list="Human2"
+	ship_prefix=""
+	species_name="Mesan"
+	species_plural="Mesans"
+	species_class="MAM"
+	species_adjective="Mesan"
+	species_bio=""
+	portrait="human"
+	name="Mesan Alignment"
+	adjective="Mesan"
+	government="science_directorate"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Mesa"
+	planet_class="pc_continental"
+	system_name="Mesa"
+	initializer="mesa_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { mesa custom_start_screen }
+
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_9.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Albrecht Detweiler"
+		portrait="human_male_04"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Director"
+	}
+	spawn_enabled=always
+	ethic="ethic_collectivist"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_decadent"
+	trait="trait_intelligent"
+	trait="trait_strong"
+	trait="trait_slow_breeders"
+}

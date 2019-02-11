@@ -1,0 +1,57 @@
+"People's Republic of Haven"
+={
+	name_list="Havenite"
+	ship_prefix="PNS"
+	species_name="Havenite"
+	species_plural="Havenites"
+	species_class="MAM"
+	species_adjective="Havenite"
+	species_bio=""
+	portrait="human"
+	name="People's Republic of Haven"
+	adjective="Havenite"
+	government="despotic_hegemony"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Haven"
+	planet_class="pc_continental"
+	system_name="Haven"
+	initializer="haven_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { haven custom_start_screen }
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_5.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"black"
+			"brown"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Rob Pierre"
+		portrait="human_male_01"
+		texture=0
+		hair=26
+		clothes=1
+		ruler_title="Chairman"
+		heir_title="Deputy Chairman"
+	}
+	spawn_enabled=always
+	ethic="ethic_fanatic_militarist"
+	ethic="ethic_materialist"
+	trait="trait_industrious"
+	trait="trait_slow_learners"
+	trait="trait_deviants"
+	trait="trait_adaptive"
+}

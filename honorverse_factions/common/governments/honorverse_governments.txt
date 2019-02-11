@@ -1,0 +1,141 @@
+manticoran_star_kingdom = {
+	icon = "gfx/interface/icons/governments/enlightened_monarchy.dds"
+	has_heir = yes
+	use_regnal_names = yes
+	
+	potential = {
+		hidden_trigger = { NOT = { is_country_type = fallen_empire } }
+		hidden_trigger = { has_country_flag = manticore }
+	}
+
+	ethics = {
+		OR = {
+			has_ethic = "ethic_materialist"
+			has_ethic = "ethic_fanatic_materialist"
+		}
+		NOT = { has_ethic = "ethic_militarist" }
+		NOT = { has_ethic = "ethic_collectivist" }
+	}
+	
+	modifier = {
+		num_tech_alternatives_add = 1
+		all_technology_research_speed = 0.05
+		navy_size_mult = 0.1
+		spaceport_ship_build_cost_mult = -0.1
+		edict_influence_cost = 0.15
+	}
+	
+	ruler_title = RT_KING
+	ruler_title_female = RT_QUEEN
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+	
+	upgrade = manticoran_star_empire
+	
+	pickable_at_start = yes
+}
+
+manticoran_star_empire = {
+	icon = "gfx/interface/icons/governments/irenic_monarchy.dds"
+	prerequisites = { "tech_galactic_administration" }
+	has_heir = yes
+	use_regnal_names = yes
+	
+	potential = {
+		hidden_trigger = { NOT = { is_country_type = fallen_empire } }
+		hidden_trigger = { has_country_flag = manticore }
+	}
+
+	ethics = {
+		OR = {
+			has_ethic = "ethic_materialist"
+			has_ethic = "ethic_fanatic_materialist"
+		}
+		NOT = { has_ethic = "ethic_militarist" }
+		NOT = { has_ethic = "ethic_collectivist" }
+	}
+
+	modifier = {
+		num_tech_alternatives_add = 2
+		all_technology_research_speed = 0.1
+		navy_size_mult = 0.2
+		spaceport_ship_build_cost_mult = -0.2
+		edict_influence_cost = 0.15
+	}
+	
+	ruler_title = RT_EMPEROR
+	ruler_title_female = RT_EMPRESS
+	heir_title = HT_CROWN_PRINCE
+	heir_title_female = HT_CROWN_PRINCESS
+	
+	pickable_at_start = no
+}
+
+grayson_protectorate ={
+	icon = "gfx/interface/icons/governments/divine_mandate.dds"
+	has_heir = yes
+	use_regnal_names = yes
+	
+	potential = {
+		hidden_trigger = { NOT = { is_country_type = fallen_empire } }
+		hidden_trigger = { has_country_flag = grayson }
+	}
+
+	ethics = {
+		OR = {
+			has_ethic = "ethic_spiritualist"
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		NOT = { has_ethic = "ethic_materialist" }
+		NOT = { has_ethic = "ethic_fanatic_materialist" }
+	}
+	
+	modifier = {
+		pop_happiness = 0.05
+		pop_food_req_mult = -0.1
+		pop_ethic_shift = -0.1
+	}
+	
+	ruler_title = RT_PROTECTOR
+	ruler_title_female = RT_PROTECTOR
+	heir_title = HT_LORD
+	heir_title_female = HT_LADY
+	
+	upgrade = reformed_grayson_protectorate
+	
+	pickable_at_start = yes	
+}
+
+reformed_grayson_protectorate = {
+	icon = "gfx/interface/icons/governments/transcendent_empire.dds"
+	has_heir = yes
+	use_regnal_names = yes
+	
+	potential = {
+		hidden_trigger = { NOT = { is_country_type = fallen_empire } }
+		hidden_trigger = { has_country_flag = grayson }
+	}
+
+	ethics = {
+		OR = {
+			has_ethic = "ethic_spiritualist"
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		NOT = { has_ethic = "ethic_materialist" }
+		NOT = { has_ethic = "ethic_fanatic_materialist" }
+	}
+	
+	modifier = {
+		pop_happiness = 0.1
+		edict_influence_cost = -0.3
+		pop_ethic_shift = -0.2
+	}
+	
+	ruler_title = RT_PROTECTOR
+	ruler_title_female = RT_PROTECTOR
+	heir_title = HT_LORD
+	heir_title_female = HT_LADY
+	
+
+	pickable_at_start = no
+}

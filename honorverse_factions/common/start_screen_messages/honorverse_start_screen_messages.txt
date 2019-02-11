@@ -1,0 +1,104 @@
+# Star Kingdom of manticore
+part = {
+	location = 0
+	localization = "START_SCREEN_manticore"
+	
+	trigger = {
+		has_country_flag = manticore
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_grayson"
+	
+	trigger = {
+		has_country_flag = grayson
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_mesa"
+	
+	trigger = {
+		has_country_flag = mesa
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_masada"
+	
+	trigger = {
+		has_country_flag = masada
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_erewhon"
+	
+	trigger = {
+		has_country_flag = erewhon
+	}		
+}
+
+
+part = {
+	location = 0
+	localization = "START_SCREEN_zanzibar"
+	
+	trigger = {
+		has_country_flag = zanzibar
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_silesia"
+	
+	trigger = {
+		has_country_flag = silesia
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_beowulf"
+	
+	trigger = {
+		has_country_flag = beowulf
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_solarian_league"
+	
+	trigger = {
+		has_country_flag = solarian_league
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_andermani"
+	
+	trigger = {
+		has_country_flag = andermani
+	}		
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_haven"
+	
+	trigger = {
+		has_country_flag = haven
+	}		
+}
+
+
+
+

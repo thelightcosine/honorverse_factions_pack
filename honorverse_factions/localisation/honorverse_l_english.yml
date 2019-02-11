@@ -1,0 +1,92 @@
+﻿l_english:
+
+ name_list_Manticore: "Manticoran"
+ name_list_Grayson: "Grayson"
+ name_list_Solarian: "Solarian"
+ name_list_Andermani: "Andermani"
+ name_list_Havenite: "Havenite"
+#
+# Star Systems
+#
+ manticore_system_initializer_NAME:0 "Manticore Binary System"
+ manticore_system_initializer_DESC:0 "The Manticore Binary Star System"
+ yeltsin_system_initializer_NAME:0 "Yeltsin's Star"
+ yeltsin_system_initializer_DESC:0 "The Yeltsin's Star system, home of the planet Grayson"
+ mesa_system_initializer_NAME:0 "Mesa System"
+ mesa_system_initializer_DESC:0 "The Mesa star system"
+ haven_system_initializer_NAME:0 "Haven System"
+ haven_system_initializer_DESC:0 "The Haven star system"
+ new_berlin_system_initializer_NAME:0 "The New Berlin System"
+ new_berlin_system_initializer_DESC:0 "The home system of the Andermani Empire"
+ beowulf_system_initializer_NAME:0 "The Sigma Draconis System"
+ beowulf_system_initializer_DESC:0 "The Sigma Draconis System, home of Beowulf"
+ erewhon_system_initializer_NAME:0 "The Erewhon System"
+ erewhon_system_initializer_DESC:0 "The Erewhon System"
+ endicott_system_initializer_NAME:0 "Endicott System"
+ endicott_system_initializer_DESC:0 "The Endicott system, home of Masada"
+ zanzibar_system_initializer_NAME:0 "Zanzibar system"
+ zanzibar_system_initializer_DESC:0 "The Zanzibar System"
+ silesia_system_initializer_NAME:0 "Silesia System"
+ silesia_system_initializer_DESC:0 "The silesia System"
+
+ #
+ # Governments
+ #
+ manticoran_star_kingdom:0 "Manticoran Star Kingdom"
+ manticoran_star_kingdom_desc:0 "§LThis government is a form of monarchy, where the monarch is the head of state working with a representative body§!"
+ manticoran_star_empire:0 "Manticoran Star Empire"
+ manticoran_star_empire_desc:0 "§LThis government is a form of monarchy, where the monarch is the head of state working with a representative body§!"
+ grayson_protectorate:0 "Grayson Protectorate"
+ grayson_protectorate_desc:0 "§LThis government is a nominally led by a monarch, the Protector, but primarily the nobility backed by an elected body of representatives.§!"
+ reformed_grayson_protectorate:0 "Reformed Grayson Protectorate"
+ reformed_grayson_protectorate_desc:0 "§LThis form of Grayson Protectorate has seen the restoration of the Protector's absolute authority.§!"
+#
+# Titles
+#
+RT_PROTECTOR:0 "Protector"
+HT_LORD:0 "Lord"
+HT_LADY:0 "Lady"
+#
+# Policies
+#
+ policy_prolong_treatment:0 "Prolong Treatment"
+ policy_prolong_treatment_desc:0 "We can extend our natural lifespans to new heights, but should we?\n"
+ prolong_treatment_none:0 "Natural Lifespans"
+ prolong_treatment_none_name:0 "Natural Lifespans"
+ prolong_treatment_none_desc:0 "Let nature take its course.\n\n§ELeaders gain no additional bonuses§!"
+ prolong_treatment_one:0 "First Generation Prolong"
+ prolong_treatment_one_name:0 "First Generation Prolong"
+ prolong_treatment_one_desc:0 "Careful coaxing of certain genetic expressions slows the aging process\n\n§HWhile active our Empire gains:§!"
+ prolong_treatment_two:0 "Second Generation Prolong"
+ prolong_treatment_two_name:0 "Second Generation Prolong"
+ prolong_treatment_two_desc:0 "Additional genetic mapping has allowed us to slow the aging process even further. \n\n§HWhile active our Empire gains:§!"
+ prolong_treatment_three:0 "Third Generation Prolong"
+ prolong_treatment_three_name:0 "Third Generation Prolong"
+ prolong_treatment_three_desc:0 "We are now able to gaurantee lifespans measured in centuries!\n\n§HWhile active our Empire gains:§!"
+
+
+ #
+ # Technologies
+ #
+ tech_prolong_treatment_one:0 "Prolong Treatment"
+ tech_prolong_treatment_one_desc:0 "Careful coaxing of certain genetic expressions slows the aging process\n\n"
+ tech_prolong_treatment_two:0 "Prolong Treatment II"
+ tech_prolong_treatment_two_desc:0 "Additional genetic mapping has allowed us to slow the aging process even further.\n\n"
+ tech_prolong_treatment_three:0 "Prolong Treatment III"
+ tech_prolong_treatment_three_desc:0 "We are now able to gaurantee lifespans measured in centuries!\n\n"
+
+ #
+ # Start Screens
+ #
+ START_SCREEN_manticore:0 "The original colonists left Earth on October 24, 775 PD aboard the sub-light hibernation ship Jason.\n\nWith the colony floundering, Manticore desperately needed new blood. The surviving original colonists however feared to lose control over their own colony if thousands of new colonists arrived, so, before opening Manticore to immigration, they rewrote the Constitution and established a constitutional monarchy.\n\nRoger I was crowned on August 1, 1485 PD, but died 1489 PD. Elizabeth Winton took over power and became Elizabeth I. The House of Winton ruled Manticore continuously since that time.\n\n"
+ START_SCREEN_grayson:0 "A group of settlers from the Church of Humanity Unchained left Earth for the Yeltsin's Star System. Tthe planet was colonized by these settlers. The settlers wanted to get away from the horrors of technology, yet, when they arrived on the planet, they were forced to use technology to survive.\n\n Two groups eventually arose, the Moderates and the Faithful.  The two groups fought each other in a bloody civil war. The Faithful were exiled to Masada after five years of war.\n\n"
+ START_SCREEN_mesa:0 "The Alignment developed from geneticist Leonard Detweiler's decision to abandon his native Beowulf and establish a settlement on the planet Mesa. His plans included genetic research on human beings and continued improvements of humans by active interference in their breeding. It came to include a variety of businesses, most notably Manpower Incorporated (formerly the Detweiler Consortium), which dealt in human slaves, and assorted other companies, and even the Mesan government. The development of a long range plan to destroy the rest of the polities in the human settled part of the Galaxy came later.\n\n"
+ START_SCREEN_masada:0 "The extreme orthodox wing of the Church of Humanity Unchained, the Faithful were extremely anti-technology and rejected the divinity of Jesus because of Earth's increasing level of technology after he died. Women were little more than wholly-owned chattel in their eyes.\n\n They eventually rebelled against the Moderates and began a bloody Civil War by killing almost all Steadholders and Protector John II. However, the Moderates rallied and fought back. The Faithful were defeated and then exiled to Masada, from which they hoped to one day re-conquer or at least destroy Grayson."
+ START_SCREEN_erewhon:0 "Erewhon was originally settled by a group of successful interstellar criminals. Initially, the planet and its enterprises were used as a front for organized crime. At the time, a successful criminal was an honorable criminal, leading to the development of an honor code that existed into the modern era. Coupled with the growth of the planetary population, support industries, and increased legitimate commerce, the government evolved into a legitimate body."
+ START_SCREEN_zanzibar:0 "Early in its history, the Zanzibar colony faced a brutal fight for survival that threw its tech base back generations. Prior to 1904 PD, Government forces pushed the Zanzibar Liberation Front, a resistance movement, from the planet. In 1904 PD, the Caliphate was joined the Manticoran Alliance. The ZLF, was politically recognized by the People's Republic of Haven in order to help bring down the Caliphate. The ZLF would start military operations against the Caliphate to help the PRH conquest of the system that was stopped."
+ START_SCREEN_silesia:0 "Established as an enlightened confederation of planetary governments, at the turn of the 19th to the 20th century PD Silesia was a wretched mishmash of corrupt governments, star-navies for hire, piracy and trade opportunities.\n\nBecause of extensive piracy Silesia became the proving ground where the Andermani Empire and the Star Kingdom of Manticore sent their newly minted officers and crews to patrol."
+ START_SCREEN_silesia:0 "The Republic of Beowulf was a small star nation and a founding member of the Solarian League. It consisted of the Sigma Draconis System and its planets, most importantly Beowulf, one of the first human colonies in outer space."
+ START_SCREEN_solarian_league:0 "With over 2,000 member and protected worlds in the 20th Century PD, the Solarian League extended in a radius of about 100 light years around the Sol System."
+ START_SCREEN_andermani:0 "The Andermani Empire was founded by Gustav Anderman, a highly successful mercenary. During one of his operations, he came across the planet Kuan Yin. The planet had a native microorganism that proved deadly to terrestrial crops. Anderman brought in modern microbiologists and genetic engineers to produce crops which were immune to the microorganisms, saving the people of Kuan Yin, who were quite willing to accept him as Emperor. The planet was officially renamed Potsdam. With this highly loyal population base, the Andermani Empire was born."
+ START_SCREEN_haven:0 "During its first centuries of existence, the Republic of Haven was one of the most prosperous human worlds in the galaxy, and was viewed as a sort of "interstellar Athens." Considering the poverty of its less favored citizens an aberration in light of Haven's prosperity, the Havenite government launched welfare measures which, after a few centuries, became a caricature of a welfare state."
+ START_SCREEN_beowulf:0 "The Republic of Beowulf was a small star nation and a founding member of the Solarian League. It consisted of the Sigma Draconis System and its planets, most importantly Beowulf, one of the first human colonies in outer space."

@@ -1,0 +1,220 @@
+﻿### People's Republic of Haven
+
+Havenite = {
+	randomized = no
+
+	# Name Lists were compiled by the good people at http://honorverse.wikia.com/ with some filler material to try and make up some of the difference
+	ship_names = {
+		corvette = {
+			 Alcazar Arlon Bastogne Baudin  Bouvet Breslau Bruat Bruges Busko Charleroi Courbet Dainville Decrès Desforge Duperré Durandal Gorzow Hamelin Hecate Hector Jaroslaw Kerebin  Kersaint Kessler Krakow Leuven Liege Linois Lubin Malbork Morillot Muselier Picquet Poznan Racer Requin Roussin Suwalki Torun Toulon Toulouse Tournai Trojan Windsong
+		}
+		
+		# various workhorse craft names
+		constructor = {
+			 Astra Figaro Goliath Trumbull Windhover
+		}
+		
+		# Slim pickings on colony ship names, fortunately they don't stay around long
+		colonizer = {
+			Jason Gideon Prometheus Icarus
+		}
+		
+		# I couldn't come up with much here so I have just left it for now
+		science = {
+			Aldrin Armstrong Columbus Copernicus Cortez Drake Hubble Goddard Galileo Einstein Gagarin Tereshkova "Zheng He" "Leif Ericson" Magellan "James Cook"
+			"Marco Polo" Newton Tesla "Von Braun" "Walter Raleigh" Asimov Clark Sagan "Ibn Battuta" Kepler Ptolemy Pytheas Azophi Discovery Voyager Tradewind Scout 
+			Pioneer Explorer Sojourner "Santa Maria" Hawking Earhart Nobel Kelvin Fahrenheit Equinox Lagrange Tsiolkovsky
+		}
+		
+		# Stepping the classes down, using Light Cruiser names for destroyers
+		destroyer = {
+			  Alexander Alvarado Athena Babar Bacchante Brilliance Caesar "Charles Wade Pope" Conqueror Cortes Diaz "Esperanza de Souza" Felicie Frigate Glimmer Hannibal Hideyoshi Huangdi "Isaiah Kenter" Jacinthe "Jonathan Talbott" "Joseph T. Marrone" "Kenneth Nastanksy" Khan Kopesh "Marcus Beaudway" Montezuma Phantom Radiance Ramses Sabine Seahorse "Solar Flare" Specter Sunspot "Thomas Fischer" Valdivia Vaubon Veronique Wari William "William Harting" Anhur Ares Broadsword Champion Claymore Cutlass "De Conde" Dirk Drusus Durandel Epee Estoc Excalibur Falchion Flamberge Foil Gladius Hachiman Huan-Ti Ishtar Jian Katana Khopesh Krashnark Loki Marduk Mars Morrigan Moscow Nuada Nurghal Odin Poignard Peridot Raiden Rapier Rienzi Sabre Scimitar Shamshir Sword Tanit Thor Tyr Wakasashi Yama	 
+		}
+		
+		# Heavy and Battle Cruiser names
+		cruiser = {
+			"Admiral Quinterra" "Citizen Admiral Tascosa" Conquistador Conquérant Fouchart Veracity Saracen Schaumberg "Theban Warrior" Triumphant Vindicator Abdali Achmed "Alexander Suvorov" "Alp Arslan" Attila Barbarossa Barbarossa Bayezid "Bernard Montgomery" Boyar Cassander Charlemagne Cheetah "Count Maresuke Nogi" "Count Tilly" Cyrus "Douglas MacArthur" Faith Farnese "George Washington" "Ho Chi Minh" Isa "Isoroku Yamamoto" "Ivan IV" Kerebin  Kutuzov "Leon Trotsky" Lion MacArthur Malik "Mao Tse-tung" "Marquis de Lafayette" "Maximilien Robespierre" Mehmed Modred Murad Musa "Oliver Cromwell" Pappenheim "Rash al-Din" Roxana Saintonge Saladin Selim Sinjar Subutai Sulieman Suliman Sultan "Sun Tzu" Tammerlane Tepes "Thomas Paine" Tiger Tinaly Tolek Tonnerre Vanguard Walid Wallenstein Warrior "William T. Sherman" Yavuz Yildirim	
+		}
+		
+		# Dreadnaught and Super Dreadnaught names
+		battleship = {
+			  Alphand Baudin  Bayard Canonnade Charette Conquete "D'Allonville" "D'Iberville" DuChesnois DuQuesne Equality Forbin Guerriere Guichen "Hector Van Dragen" Hero "Joseph Tilden" Lancelot Lepanto Majestic Mouchez "New Republic" Rousseau Salamis "Sovereign of Space" "Sovereignty of the People" Temeraire Terror Timoleon Victorieux Chevalier Havensport Hempstead Kaplan "Macrea's Tor" Merston "New Boston" "Nouveau Paris" "Rene d'Aiguillon" Shaldon Waldensville	
+		}
+		
+		orbital_station = { }
+		mining_station = { }
+		research_station = { }
+		wormhole_station = { }
+		observation_station = { }
+		outpost_station = {
+			#random_names = {
+				"Far Reach" Watchtower Sphered Influential Assertion SPACERAD "Watchful Eye" Sentinel Demarcator "Frontier Finalizer" "Ever Watchful" Divider Bastion "Home Turf" Wide
+			#}
+			#sequential_name = "%O% Frontier Outpost"
+		}
+		
+		# Re-purposed CLAC names here just to have something
+		transport = {
+			 Astra Aviary Peregrine Skylark Wolverine
+		}
+
+		military_station_small = { 
+			Equality Fraternity Liberty Mercury Venus Terra Mars Jupiter Saturn Uranus Neptune Luna Phobos Deimos Ceres 
+			Ganymede Callisto Io Europa Titan Rhea Iapetus Dione Tethys Enceladus Mimas Titania 
+			Oberon Umbriel Ariel Miranda Triton Pluto Charon 
+		}
+		
+		military_station_medium = { 
+			Equality Fraternity Liberty Mercury Venus Terra Mars Jupiter Saturn Uranus Neptune Luna Phobos Deimos Ceres 
+			Ganymede Callisto Io Europa Titan Rhea Iapetus Dione Tethys Enceladus Mimas Titania 
+			Oberon Umbriel Ariel Miranda Triton Pluto Charon 
+		}
+
+		
+		military_station_large = { 
+			Equality Fraternity Liberty Mercury Venus Terra Mars Jupiter Saturn Uranus Neptune Luna Phobos Deimos Ceres 
+			Ganymede Callisto Io Europa Titan Rhea Iapetus Dione Tethys Enceladus Mimas Titania 
+			Oberon Umbriel Ariel Miranda Triton Pluto Charon
+		}
+		
+
+	}
+
+	fleet_names = {
+		random_names = {
+			"The Hoplite Fleet" "The Phalanx Fleet" "The Centurion Fleet" "The Immortal Fleet" "The Knight Fleet" "The Archer Fleet" "The Cavalry Fleet" "The Lancer Fleet" "The Landsknechte Fleet" "The Gendarme Fleet" "The Arquebusier Fleet" "The Tercio Fleet" "The Musketeer Fleet" "The Millenial Fleet"
+		}
+		sequential_name = "%O% Fleet"
+	}
+	
+	army_names = {
+	
+		defense_army = {
+			sequential_name = "%O% Totenkopf Hussars"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Expeditionary Force"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Indentured Rifles"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Army"
+		}
+		
+		robotic_army = {
+			sequential_name = "%O% Hunter-Killer Group"
+		}
+		
+		android_army = {
+			sequential_name = "%O% Synthetic Rangers"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Psi Commando"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Bio-Warfare Division"
+		}
+		
+		gene_warrior_army = {
+			random_names = {
+				"SARC-A 'Gladiators'" "SARC-B 'Widowmakers'" "SARC-C 'Immortals'" "SARC-D 'Berserkers'" "SARC-E 'Assassins'"
+				"SARC-F 'Reapers'" "SARC-G 'Nighthawks'" "SARC-H 'Desperados'" "SARC-I 'Grey Knights'" "SARC-J 'Roughnecks'" 
+			}
+			sequential_name = "%O% Bio-Engineered Squadron"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Acrisia Aurora Capella Euterpe Faunus Hesperos Keresia Melpomenia Nexon Osiris Pallas Pallena Proclas 
+				Rhea Saon Smitheus Solaria Tethys Theia Destinikon Doron Hesperides Noricum Tyndis "Nova Constantinople"
+				Athura Tartessos Agartha "St. Knatchbull" "St. Caspar" Truett "St. Hossack" Flaxington Girdwood Fincastle 
+				Rattenbury Grinstead Leffingwell Durkheim Treadway Hoxworth "Hinckley's Hope" Tronchet Knutton Corregan 
+				Mullineux "Fitzroy's World" "Schimmel's World" Lockney
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				"Frampton Sands" Sunrise "Nova Alexandria" Inferno
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				Khersonia Jangala Broadleaf Shrub
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				Tartarus "High Ground" "Nova Antioch"
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				Destiny Bastion Citadel Acropolis Delphi Harmony Dawnlight Myndos Thebes Camelot Arcadia Abbassus Ashur
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+				Sanctuary Serendipity Deliverance Apollonia "Nova Babylon" Garden
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				Hyderia "Meredith Bay" Neritum "Port Bixby" "Port Snedden"
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				Stonehead "Nova Samarkand" Evonium 
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				Jotunheim Winter
+			}
+		}
+		
+	}
+
+	character_names = {
+
+		names1 = {
+			weight = 100
+			first_names_male = {
+				Robert Oscar Thomas Javier Sidney Diego Frazier Calvin Frederico Wayne Henri William Justin Kenneth Edouard Heinrich Andre Antoine Matthew Russel Ronald Ellen Charles Pablo Leonard Ephraim Ray Arnold Joseph Ivan Victor Kevin Sean Sylvester	Hugh Travis Gregor 
+			}
+			first_names_female = {
+				Molly Jillian Eloise Shannon Esther Danielle Joyce Midge Paulette Henrietta Camille Diana Jennifer Ellen Desiree Dana Meredith Genevieve Sandra Angelica 	
+			}
+			second_names = {
+				Foraker McQueen Heathrow  Heemskerk  Pacelot    Henderson  Henneman  Hereux  Hermier   Herrick  Hewitt    Higgins  Hillyard   Holcombe  Holtz  Honeker    Houghton  Hovanian  Howard   Hughes   Hübner  Inchman  Innis          Jackson   Jamka     Jardine  Javits    Jessup    Johnson    Cook  Joubert  Joubert  Jourdain  Jourdain  Julian    Jurgens  Justice    Kamerling  Kanamashi   Kellet  Keppler  Kersaint  Kirkegard    Kochkarian   Krenckel   Kuttner  L'anglais   Lacroix  Lacy  LaFitte  Lampert  Lansiquot  Lapierre  Lapisch  Lauder   Laurent  le Vern    LePic  Levitt  Lewis     Longmont  Lowe  (State Security)  Lowell  Loyola   Luchner  Luff  MacAfee  MacIntosh  MacMurtree  MacNaughton   Mahoney    Malenkov   Mangrum  Manning    Marquette  Marston  Masterman    Mathieson    McGwire  McGwire  McQueen  Mercier    Mikasinovich   Milligan   Montreau  Moore  Morris   Mount  Nesbitt  Nesbitt   Nielsen  Norton  O'Faolain  Ogilve  Okamura  Orafson  Pallier  Palmer-Levy   Parnell   Patten  Penevski  Perot   Petit  Pierre  Pierre  Polanco    Porter  Poykkonen  Preston  Preznikov  Pritchart  Pritchart   Péricard  Quedilla  Radamacher      Randall  Ransom  Raven  Redmont  Reichman  Reidel  Reumann   Riogetti    Rodham  Rolla  Rollins  Rothschild  Rousseau       Rutledge  Ryan  Sabourin  Saint-Just  Sakellaris   Sanchez Pierre  Saint-Just  Ransom  Harris  Pritchart  DuQuesne  Abbot  Abercrombie  Abrioux  Adamson  Addison  Agnelli  Akimoto  Alexander  Alouette  Anders  Anderson  Aston  Auderska  Austell  Baker  Ballon  Barloi  Bascou  Beauchamp  Beaupré  Beausoleil  Begin  Belardinelli  Bellefeuille    Bergren  Bhadressa  Bibeau  Blanchard  Boardman  Bogdanovich  Borderwijk  Bostwick  Bottereau  Bourchier  Bousquet  Bouvier  Brangeard  Branscombe  Bressand  Bruckheimer  Bryan  Bukato  Cachat  Callahan  Caminetti  Candleman  Canning  Carmouche  cont.  Carson  Caslet  Houellebecq  Challot  Chavez  Chernock  Chin  Chin-Ri  Christiansen  Citizen  Clapp  Clignet  Cloutier  Coglin  Conflans  Connors  Constantine  Darlington  De  Brassieres  de  Groot  la  Sangliere  Sangro  deCastro  DeClercq  DeGeorge  DeLaney  DesCours  DeSoto  Deutscher  Diamato  Dimitri  Dominick  Downey  DuChamps  Dumarest  DuPres  Durand  Durkheim  Dutton  Duval  Edwards  Egert  Eisenberg  Ellefsen  Enquien  Ericsson  Beach  Fallon  Farley  Fawcett  Flanders  Fontein  Foraker  Fraiser  Frankel  Fredericks  Froidan  Gallanti  Giancola  Giovanni  Gironde  Gisborne  Giscard  Goldbach  Gottlieb  Gozzi  Graveson  Gregory  Gricou  Griffith  Grimault  Griswold  Groenewold  Grosclaude  Grossman  Guthrie  Guyard  Hackett  Haines  Hamer  Hampton  Hanriot  Hargraves  Harken  Hartman  Hathaway  	
+			}
+			regnal_first_names_male = {
+				Robert Oscar Thomas Javier Sidney	
+			}
+			regnal_first_names_female = {
+				Molly Jillian Eloise Shannon Esther Danielle Joyce Midge Paulette Henrietta Camille Diana Jennifer Ellen Desiree Dana Meredith Genevieve Sandra Angelica 		
+			}
+			regnal_second_names = {
+				Pierre Saint-Just Ransom Harris Pritchart DuQuesne 
+			}
+		}
+	}
+	
+}

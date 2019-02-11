@@ -1,0 +1,56 @@
+"Solarian League"
+={
+	name_list="Solarian"
+	ship_prefix="SLNS"
+	species_name="Solarian"
+	species_plural="Solarians"
+	species_class="MAM"
+	species_adjective="Solarian"
+	species_bio=""
+	portrait="human"
+	name="Solarian League"
+	adjective="Solarian"
+	government="plutocratic_oligarchy"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Old Terra"
+	planet_class="pc_continental"
+	system_name="Sol"
+	initializer="sol_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { solarian_league custom_start_screen }
+
+	empire_flag={
+		icon={
+			category="human"
+			file="flag_human_8.dds"
+		}
+		background={
+			category="backgrounds"
+			file="diagonal.dds"
+		}
+		colors={
+			"dark_blue"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Kun Chol Yao"
+		portrait="human_male_02"
+		texture=0
+		hair=8
+		clothes=2
+	}
+	spawn_enabled=always
+	ethic="ethic_individualist"
+	ethic="ethic_materialist"
+	trait="trait_slow_learners"
+	trait="trait_deviants"
+	trait="trait_industrious"
+	trait="trait_adaptive"
+}

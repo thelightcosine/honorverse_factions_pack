@@ -1,0 +1,148 @@
+
+prolong_treatment = {
+
+	potential = {
+		has_technology = tech_prolong_treatment_one
+	}
+	
+	option = {
+		name = "prolong_treatment_none"
+		
+		policy_flags = {
+			leader_enhancement_natural_selection
+		}
+		
+		on_enabled = {
+			# custom_tooltip = "policy_allow_slavery_effect_disable"
+		}
+		
+		modifier = {}
+		
+	}
+	
+	option = {
+		name = "prolong_treatment_one"
+		
+		policy_flags = {
+			prolong_treatment_one
+		}
+		modifier = {
+			leader_age = 25
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_individualist"
+					has_ethic = "ethic_fanatic_individualist"
+				}
+			}
+		}
+		
+		pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.05
+				pop_has_ethic = "ethic_spiritualist"
+			}
+			modifier = {
+				add = -0.10
+				pop_has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		
+		prerequisites = { tech_prolong_treatment_one }
+	}
+	
+	option = {
+		name = "prolong_treatment_two"
+		
+		policy_flags = {
+			prolong_treatment_two
+		}
+		modifier = {
+			leader_age = 50
+		}
+		
+		prerequisites = { tech_prolong_treatment_two }
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_individualist"
+					has_ethic = "ethic_fanatic_individualist"
+				}
+			}
+		}
+		
+		pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.05
+				pop_has_ethic = "ethic_spiritualist"
+			}
+			modifier = {
+				add = -0.10
+				pop_has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+	}
+
+	option = {
+		name = "prolong_treatment_three"
+		
+		policy_flags = {
+			prolong_treatment_three
+		}
+		modifier = {
+			leader_age = 100
+		}
+		
+		prerequisites = { tech_prolong_treatment_three }
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_spiritualist"
+					has_ethic = "ethic_fanatic_spiritualist"
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					has_ethic = "ethic_individualist"
+					has_ethic = "ethic_fanatic_individualist"
+				}
+			}
+		}
+		
+		pop_happiness = {
+			base = 0
+			modifier = {
+				add = -0.10
+				pop_has_ethic = "ethic_spiritualist"
+			}
+			modifier = {
+				add = -0.20
+				pop_has_ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+	}
+}

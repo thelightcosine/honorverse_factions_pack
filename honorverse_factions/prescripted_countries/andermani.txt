@@ -1,0 +1,57 @@
+"Andermani Empire"
+={
+	name_list="Andermani"
+	ship_prefix="IANS"
+	species_name="Andermani"
+	species_plural="Adermani"
+	species_class="MAM"
+	species_adjective="Adermani"
+	species_bio=""
+	portrait="human"
+	name="Andermani Empire"
+	adjective="Andermani"
+	government="despotic_empire"
+	ftl=warp
+	weapon="tech_missiles_1"
+	planet_name="Potsdam"
+	planet_class="pc_continental"
+	system_name="New Berlin"
+	initializer="new_berlin_system_initializer"
+	graphical_culture="mammalian_01"
+	city_graphical_culture="mammalian_01"
+
+	flags = { andermani custom_start_screen }
+
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_18.dds"
+		}
+		background={
+			category="backgrounds"
+			file="horizontal_stripe.dds"
+		}
+		colors={
+			"dark_purple"
+			"red"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Gustav Anderman"
+		portrait="human_male_02"
+		texture=0
+		hair=3
+		clothes=3
+		ruler_title="Emperor"
+	}
+	spawn_enabled=always
+	ethic="ethic_militarist"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_talented"
+	trait="trait_nonadaptive"
+	trait="trait_slow_breeders"
+	trait="trait_very_strong"
+}
