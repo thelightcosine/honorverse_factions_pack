@@ -1,0 +1,62 @@
+"Anderman Empire"
+={
+	key="Anderman Empire"
+	ship_prefix="IANS"
+	species={
+		class="HUM"
+		portrait="human"
+		name="Adermani"
+		plural="Andermani"
+		adjective="Andermani"
+		name_list="Andermani"
+		trait="trait_very_strong"
+		trait="trait_quick_learners"
+		trait="trait_nonadaptive"
+	}
+	name="Anderman Empire"
+	adjective="Adermani"
+	authority="auth_imperial"
+	government="gov_star_empire"
+	advisor_voice_type="l_the_soldier"
+	planet_name="Potsdam"
+	planet_class="pc_continental"
+	system_name="New Berlin"
+	initializer=""
+	graphical_culture="humanoid_01"
+	city_graphical_culture="mammalian_01"
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_9.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"dark_purple"
+			"red"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Gustav anderman"
+		portrait="human_male_02"
+		texture=0
+		hair=6
+		clothes=2
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_democratic_crusaders_room"
+	spawn_enabled=yes
+	ethic="ethic_fanatic_militarist"
+	ethic="ethic_materialist"
+	civics={
+		"civic_aristocratic_elite"
+		"civic_nationalistic_zeal"
+	}
+}

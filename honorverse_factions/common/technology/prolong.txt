@@ -1,0 +1,219 @@
+# Prolong Treatment Generation I
+tech_prolong_treatment_one = {
+	cost = @tier2cost2
+	area = society
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	prerequisites = { "tech_vitality_boosters" }
+	weight = @tier2weight2
+
+  modifier = {
+		leader_age = 25
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+		}
+	}
+
+	weight_modifier = {
+		factor = 1
+    modifier = {
+			factor = 2
+      OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+    modifier = {
+      factor = 0.1
+      OR = {
+        has_ethic = "ethic_spiritualist"
+        has_ethic = "ethic_fanatic_spiritualist"
+      }
+    }
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+      AND = {
+        research_leader = {
+          area = society
+          has_trait = "leader_trait_expertise_biology"
+        }
+        NOR = {
+          has_ethic = "ethic_spiritualist"
+          has_ethic = "ethic_fanatic_spiritualist"
+        }
+      }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+      AND = {
+        research_leader = {
+          area = society
+          has_trait = "leader_trait_expertise_biology"
+        }
+        NOR = {
+          has_ethic = "ethic_spiritualist"
+          has_ethic = "ethic_fanatic_spiritualist"
+        }
+      }
+		}
+	}
+}
+
+# Prolong Treatment Generation II
+tech_prolong_treatment_two = {
+	cost = @tier2cost3
+	area = society
+	category = { biology }
+	tier = 2
+	is_rare = yes
+	prerequisites = { "tech_prolong_treatment_one" }
+	weight = @tier2weight2
+
+  modifier = {
+		leader_age = 50
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+		}
+	}
+
+	weight_modifier = {
+		factor = 1
+    modifier = {
+			factor = 2
+      OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+    modifier = {
+      factor = 0.1
+      OR = {
+        has_ethic = "ethic_spiritualist"
+        has_ethic = "ethic_fanatic_spiritualist"
+      }
+    }
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+      AND = {
+        research_leader = {
+          area = society
+          has_trait = "leader_trait_expertise_biology"
+        }
+        NOR = {
+          has_ethic = "ethic_spiritualist"
+          has_ethic = "ethic_fanatic_spiritualist"
+        }
+      }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+      AND = {
+        research_leader = {
+          area = society
+          has_trait = "leader_trait_expertise_biology"
+        }
+        NOR = {
+          has_ethic = "ethic_spiritualist"
+          has_ethic = "ethic_fanatic_spiritualist"
+        }
+      }
+		}
+	}
+}
+
+
+# Prolong Treatment Generation III
+tech_prolong_treatment_three = {
+	cost = @tier3cost2
+	area = society
+	category = { biology }
+	tier = 3
+	is_rare = yes
+	prerequisites = { "tech_prolong_treatment_two" }
+	weight = @tier2weight2
+
+  modifier = {
+		leader_age = 100
+	}
+
+	potential = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_civic = civic_machine_assimilator
+		}
+	}
+
+	weight_modifier = {
+		factor = 1
+    modifier = {
+			factor = 2
+      OR = {
+					has_ethic = "ethic_materialist"
+					has_ethic = "ethic_fanatic_materialist"
+			}
+		}
+    modifier = {
+      factor = 0.1
+      OR = {
+        has_ethic = "ethic_spiritualist"
+        has_ethic = "ethic_fanatic_spiritualist"
+      }
+    }
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+      AND = {
+        research_leader = {
+          area = society
+          has_trait = "leader_trait_expertise_biology"
+        }
+        NOR = {
+          has_ethic = "ethic_spiritualist"
+          has_ethic = "ethic_fanatic_spiritualist"
+        }
+      }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+      AND = {
+        research_leader = {
+          area = society
+          has_trait = "leader_trait_expertise_biology"
+        }
+        NOR = {
+          has_ethic = "ethic_spiritualist"
+          has_ethic = "ethic_fanatic_spiritualist"
+        }
+      }
+		}
+	}
+}

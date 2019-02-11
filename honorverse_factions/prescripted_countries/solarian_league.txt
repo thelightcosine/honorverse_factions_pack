@@ -1,31 +1,34 @@
 "Solarian League"
 ={
-	name_list="Solarian"
+	key="Solarian League"
 	ship_prefix="SLNS"
-	species_name="Solarian"
-	species_plural="Solarians"
-	species_class="MAM"
-	species_adjective="Solarian"
-	species_bio=""
-	portrait="human"
+	species={
+		class="HUM"
+		portrait="human"
+		name="Solarian"
+		plural="Solarians"
+		adjective="Solarian"
+		name_list="Solarian"
+		trait="trait_slow_learners"
+		trait="trait_deviants"
+		trait="trait_decadent"
+		trait="trait_industrious"
+		trait="trait_thrifty"
+	}
 	name="Solarian League"
 	adjective="Solarian"
-	government="plutocratic_oligarchy"
-	ftl=warp
-	weapon="tech_missiles_1"
-	planet_name="Old Terra"
+	authority="auth_democratic"
+	government="gov_direct_democracy"
+	planet_name="Earth"
 	planet_class="pc_continental"
 	system_name="Sol"
 	initializer="sol_system_initializer"
-	graphical_culture="mammalian_01"
+	graphical_culture="humanoid_01"
 	city_graphical_culture="mammalian_01"
-
-	flags = { solarian_league custom_start_screen }
-
 	empire_flag={
 		icon={
 			category="human"
-			file="flag_human_8.dds"
+			file="flag_human_9.dds"
 		}
 		background={
 			category="backgrounds"
@@ -33,7 +36,7 @@
 		}
 		colors={
 			"dark_blue"
-			"teal"
+			"light_green"
 			"null"
 			"null"
 		}
@@ -43,14 +46,20 @@
 		name="Kun Chol Yao"
 		portrait="human_male_02"
 		texture=0
-		hair=8
-		clothes=2
+		hair=12
+		clothes=1
+		ruler_title="President"
+		ruler_title_female="President"
+		leader_class="ruler"
 	}
-	spawn_enabled=always
-	ethic="ethic_individualist"
-	ethic="ethic_materialist"
-	trait="trait_slow_learners"
-	trait="trait_deviants"
-	trait="trait_industrious"
-	trait="trait_adaptive"
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_migrating_flock_room"
+	spawn_enabled=yes
+	ethic="ethic_militarist"
+	ethic="ethic_fanatic_materialist"
+	civics={
+		"civic_shadow_council"
+		"civic_cutthroat_politics"
+	}
 }

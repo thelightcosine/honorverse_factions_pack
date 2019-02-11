@@ -1,38 +1,43 @@
-grayson = {
-	name_list="Grayson"
+"Protectorate of Grayson"
+={
+	key="Protectorate of Grayson"
 	ship_prefix="GNS"
-	species_name="Grayson"
-	species_plural="Graysons"
-	species_class="MAM"
-	species_adjective="Grayson"
-	species_bio=""
-	portrait="human"
+	species={
+		class="HUM"
+		portrait="human"
+		name="Grayson"
+		plural="Graysons"
+		adjective="Grayson"
+		name_list="Grayson"
+		trait="trait_agrarian"
+		trait="trait_nonadaptive"
+		trait="trait_traditional"
+		trait="trait_conformists"
+		trait="trait_fleeting"
+	}
 	name="Protectorate of Grayson"
 	adjective="Grayson"
-	government="grayson_protectorate"
-	ftl=warp
-	weapon="tech_missiles_1"
+	authority="auth_imperial"
+	government="gov_feudal_empire"
+	advisor_voice_type="l_spiritualist"
 	planet_name="Grayson"
 	planet_class="pc_continental"
 	system_name="Yeltsin's Star"
-	initializer="yeltsin_system_initializer"
-	graphical_culture="mammalian_01"
-	city_graphical_culture="mammalian_01"
-
-	flags = { grayson custom_start_screen }
-
+	initializer=""
+	graphical_culture="humanoid_01"
+	city_graphical_culture="humanoid_01"
 	empire_flag={
 		icon={
 			category="ornate"
-			file="flag_ornate_20.dds"
+			file="flag_ornate_5.dds"
 		}
 		background={
 			category="backgrounds"
 			file="circle.dds"
 		}
 		colors={
+			"black"
 			"orange"
-			"red"
 			"null"
 			"null"
 		}
@@ -40,18 +45,21 @@ grayson = {
 	ruler={
 		gender=male
 		name="Benjamin Mayhew"
-		portrait="human_male_04"
+		portrait="human_male_01"
 		texture=0
-		hair=23
-		clothes=4
+		hair=14
+		clothes=6
 		ruler_title="Protector"
+		leader_class="ruler"
 	}
-	spawn_enabled=always
-	ethic="ethic_individualist"
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_evangelizing_zealots_room"
+	spawn_enabled=yes
+	ethic="ethic_xenophobe"
 	ethic="ethic_fanatic_spiritualist"
-	trait="trait_nonadaptive"
-	trait="trait_communal"
-	trait="trait_conformists"
-	trait="trait_fleeting"
-	trait="trait_agrarian"	
+	civics={
+		"civic_aristocratic_elite"
+		"civic_feudal_realm"
+	}
 }

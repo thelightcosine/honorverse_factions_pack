@@ -1,26 +1,30 @@
-manticore = {
-	name_list="Manticore"
+"Star Empire of Manticore"
+={
+	key="Star Empire of Manticore"
 	ship_prefix="HMS"
-	species_name="Manticoran"
-	species_plural="Manticorans"
-	species_class="MAM"
-	species_adjective="Manticoran"
-	species_bio=""
-	portrait="human"
-	name="Star Kingdom of Manticore"
+	species={
+		class="HUM"
+		portrait="human"
+		name="Manticoran"
+		plural="Manticorans"
+		adjective="Manticoran"
+		name_list="Manticore"
+		trait="trait_ingenious"
+		trait="trait_industrious"
+		trait="trait_deviants"
+		trait="trait_quarrelsome"
+	}
+	name="Star Empire of Manticore"
 	adjective="Manticoran"
-	government="manticoran_star_kingdom"
-	ftl=warp
-	weapon="tech_missiles_1"
+	authority="auth_imperial"
+	government="gov_star_empire"
+	advisor_voice_type="l_the_soldier"
 	planet_name="Manticore"
 	planet_class="pc_continental"
-	system_name="Manticore Binary System"
-	initializer="manticore_system_initializer"
-	graphical_culture="mammalian_01"
+	system_name="Manticore"
+	initializer=""
+	graphical_culture="humanoid_01"
 	city_graphical_culture="mammalian_01"
-
-	flags = { manticore custom_start_screen }
-	
 	empire_flag={
 		icon={
 			category="human"
@@ -28,11 +32,11 @@ manticore = {
 		}
 		background={
 			category="backgrounds"
-			file="v.dds"
+			file="circle.dds"
 		}
 		colors={
 			"red"
-			"orange"
+			"black"
 			"null"
 			"null"
 		}
@@ -42,15 +46,19 @@ manticore = {
 		name="Elizabeth Winton"
 		portrait="human_female_05"
 		texture=0
-		hair=1
-		clothes=4
-		ruler_title_female="Queen"
+		hair=0
+		clothes=0
+		leader_class="ruler"
 	}
-	spawn_enabled=always
-	ethic="ethic_individualist"
-	ethic="ethic_fanatic_materialist"
-	trait="trait_sedentary"
-	trait="trait_intelligent"
-	trait="trait_thrifty"
-	trait="trait_slow_breeders"
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_decadent_hierarchy_room"
+	spawn_enabled=yes
+	ethic="ethic_xenophile"
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"
+	civics={
+		"civic_distinguished_admiralty"
+		"civic_aristocratic_elite"
+	}
 }

@@ -1,7 +1,7 @@
-"Mesan Alignment"
+"Manpower Inc"
 ={
-	key="Mesan Alignment"
-	ship_prefix="MANS"
+	key="Manpower Inc"
+	ship_prefix="ISS"
 	species={
 		class="HUM"
 		portrait="human"
@@ -9,26 +9,26 @@
 		plural="Mesans"
 		adjective="Mesan"
 		name_list="HUM1"
-		trait="trait_very_strong"
-		trait="trait_intelligent"
+		trait="trait_natural_sociologists"
+		trait="trait_extremely_adaptive"
 		trait="trait_decadent"
 		trait="trait_repugnant"
 	}
-	name="Mesan Alignment"
-	adjective="Mesan"
-	authority="auth_dictatorial"
-	government="gov_totalitarian_regime"
-	advisor_voice_type="l_xenophobe"
-	planet_name="Gamma"
+	name="Manpower Inc"
+	adjective="Manpower"
+	authority="auth_corporate"
+	government="gov_criminal_syndicate"
+	advisor_voice_type="l_slick_corp"
+	planet_name="Mesa"
 	planet_class="pc_continental"
-	system_name="Darius"
+	system_name="Mesa"
 	initializer=""
 	graphical_culture="humanoid_01"
-	city_graphical_culture="mammalian_01"
+	city_graphical_culture="reptilian_01"
 	empire_flag={
 		icon={
 			category="domination"
-			file="domination_21.dds"
+			file="domination_7.dds"
 		}
 		background={
 			category="backgrounds"
@@ -42,24 +42,24 @@
 		}
 	}
 	ruler={
-		gender=male
-		name="Albrecht Detweiler"
-		portrait="human_male_04"
+		gender=female
+		name="Aldona Anisimovna"
+		portrait="human_female_04"
 		texture=0
-		hair=9
+		hair=4
 		clothes=2
 		ruler_title="Chairman"
+		ruler_title_female="Chairwoman"
 		leader_class="ruler"
 	}
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
-	room="personality_federation_builders_room"
+	room="default_room"
 	spawn_enabled=yes
 	ethic="ethic_authoritarian"
-	ethic="ethic_xenophobe"
-	ethic="ethic_materialist"
+	ethic="ethic_fanatic_materialist"
 	civics={
-		"civic_slaver_guilds"
-		"civic_efficient_bureaucracy"
+		"civic_indentured_assets"
+		"civic_criminal_heritage"
 	}
 }

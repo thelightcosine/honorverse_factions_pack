@@ -1,27 +1,31 @@
 "Faithful of the Church of Humanity Unchained"
 ={
-	name_list="Human2"
+	key="Faithful of the Church of Humanity Unchained"
 	ship_prefix="MNS"
-	species_name="Masadan"
-	species_plural="Masadans"
-	species_class="MAM"
-	species_adjective="Masadan"
-	species_bio=""
-	portrait="human"
+	species={
+		class="HUM"
+		portrait="human"
+		name="Masadan"
+		plural="Masadans"
+		adjective="Masadan"
+		name_list="HUM1"
+		trait="trait_conformists"
+		trait="trait_repugnant"
+		trait="trait_slow_learners"
+		trait="trait_traditional"
+		trait="trait_rapid_breeders"
+	}
 	name="Faithful of the Church of Humanity Unchained"
 	adjective="Faithful"
-	government="divine_mandate"
-	ftl=warp
-	weapon="tech_missiles_1"
+	authority="auth_oligarchic"
+	government="gov_purification_committee"
+	advisor_voice_type="l_xenophobe"
 	planet_name="Masada"
 	planet_class="pc_continental"
 	system_name="Endicott"
-	initializer="endicott_system_initializer"
-	graphical_culture="mammalian_01"
-	city_graphical_culture="mammalian_01"
-
-	flags = { masada custom_start_screen }
-
+	initializer=""
+	graphical_culture="humanoid_01"
+	city_graphical_culture="humanoid_01"
 	empire_flag={
 		icon={
 			category="domination"
@@ -32,7 +36,7 @@
 			file="stripes.dds"
 		}
 		colors={
-			"green"
+			"dark_green"
 			"black"
 			"null"
 			"null"
@@ -43,15 +47,19 @@
 		name="Thomas Simonds"
 		portrait="human_male_03"
 		texture=0
-		hair=7
-		clothes=4
+		hair=19
+		clothes=0
 		ruler_title="Chief Elder"
+		leader_class="ruler"
 	}
-	spawn_enabled=always
-	ethic="ethic_militarist"
-	ethic="ethic_fanatic_spiritualist"
-	trait="trait_conformists"
-	trait="trait_slow_learners"
-	trait="trait_repugnant"
-	trait="trait_industrious"
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_spiritual_seekers_room"
+	spawn_enabled=yes
+	ethic="ethic_fanatic_xenophobe"
+	ethic="ethic_spiritualist"
+	civics={
+		"civic_exalted_priesthood"
+		"civic_fanatic_purifiers"
+	}
 }

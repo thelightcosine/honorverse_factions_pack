@@ -1,0 +1,65 @@
+"Kingdom of Torch"
+={
+	key="Kingdom of Torch"
+	ship_prefix="RTNS"
+	species={
+		class="HUM"
+		portrait="human"
+		name="Genetic Slave"
+		plural="Genetic Slaves"
+		adjective="Genetic Slave"
+		name_list="HUM1"
+		trait="trait_very_strong"
+		trait="trait_deviants"
+		trait="trait_quarrelsome"
+		trait="trait_quick_learners"
+	}
+	name="Kingdom of Torch"
+	adjective="Torch"
+	authority="auth_democratic"
+	government="gov_military_commissariat"
+	advisor_voice_type="l_egalitarian"
+	planet_name="Torch"
+	planet_class="pc_tropical"
+	system_name="Congo"
+	initializer=""
+	graphical_culture="humanoid_01"
+	city_graphical_culture="mammalian_01"
+	empire_flag={
+		icon={
+			category="human"
+			file="flag_human_11.dds"
+		}
+		background={
+			category="backgrounds"
+			file="v.dds"
+		}
+		colors={
+			"green"
+			"blue"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Berry Zilwicki"
+		portrait="human_female_04"
+		texture=0
+		hair=3
+		clothes=0
+		ruler_title_female="Queen"
+		leader_class="ruler"
+	}
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="personality_decadent_hierarchy_room"
+	spawn_enabled=yes
+	ethic="ethic_egalitarian"
+	ethic="ethic_xenophile"
+	ethic="ethic_militarist"
+	civics={
+		"civic_idealistic_foundation"
+		"civic_free_haven"
+	}
+}

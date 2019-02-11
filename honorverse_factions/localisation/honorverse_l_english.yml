@@ -30,42 +30,6 @@
  silesia_system_initializer_DESC:0 "The silesia System"
 
  #
- # Governments
- #
- manticoran_star_kingdom:0 "Manticoran Star Kingdom"
- manticoran_star_kingdom_desc:0 "§LThis government is a form of monarchy, where the monarch is the head of state working with a representative body§!"
- manticoran_star_empire:0 "Manticoran Star Empire"
- manticoran_star_empire_desc:0 "§LThis government is a form of monarchy, where the monarch is the head of state working with a representative body§!"
- grayson_protectorate:0 "Grayson Protectorate"
- grayson_protectorate_desc:0 "§LThis government is a nominally led by a monarch, the Protector, but primarily the nobility backed by an elected body of representatives.§!"
- reformed_grayson_protectorate:0 "Reformed Grayson Protectorate"
- reformed_grayson_protectorate_desc:0 "§LThis form of Grayson Protectorate has seen the restoration of the Protector's absolute authority.§!"
-#
-# Titles
-#
-RT_PROTECTOR:0 "Protector"
-HT_LORD:0 "Lord"
-HT_LADY:0 "Lady"
-#
-# Policies
-#
- policy_prolong_treatment:0 "Prolong Treatment"
- policy_prolong_treatment_desc:0 "We can extend our natural lifespans to new heights, but should we?\n"
- prolong_treatment_none:0 "Natural Lifespans"
- prolong_treatment_none_name:0 "Natural Lifespans"
- prolong_treatment_none_desc:0 "Let nature take its course.\n\n§ELeaders gain no additional bonuses§!"
- prolong_treatment_one:0 "First Generation Prolong"
- prolong_treatment_one_name:0 "First Generation Prolong"
- prolong_treatment_one_desc:0 "Careful coaxing of certain genetic expressions slows the aging process\n\n§HWhile active our Empire gains:§!"
- prolong_treatment_two:0 "Second Generation Prolong"
- prolong_treatment_two_name:0 "Second Generation Prolong"
- prolong_treatment_two_desc:0 "Additional genetic mapping has allowed us to slow the aging process even further. \n\n§HWhile active our Empire gains:§!"
- prolong_treatment_three:0 "Third Generation Prolong"
- prolong_treatment_three_name:0 "Third Generation Prolong"
- prolong_treatment_three_desc:0 "We are now able to gaurantee lifespans measured in centuries!\n\n§HWhile active our Empire gains:§!"
-
-
- #
  # Technologies
  #
  tech_prolong_treatment_one:0 "Prolong Treatment"

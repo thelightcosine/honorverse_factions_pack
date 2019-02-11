@@ -1,27 +1,29 @@
 "Republic of Beowulf"
 ={
-	name_list="Human"
+	key="Republic of Beowulf"
 	ship_prefix="BSDF"
-	species_name="Beowulfan"
-	species_plural="Beowulfans"
-	species_class="MAM"
-	species_adjective="Beowulfan"
-	species_bio=""
-	portrait="human"
+	species={
+		class="HUM"
+		portrait="human"
+		name="Beowulfan"
+		plural="Beowulfans"
+		adjective="Beowulfan"
+		name_list="HUM1"
+		trait="trait_natural_sociologists"
+		trait="trait_intelligent"
+		trait="trait_weak"
+	}
 	name="Republic of Beowulf"
 	adjective="Beowulfan"
-	government="plutocratic_oligarchy"
-	ftl=warp
-	weapon="tech_missiles_1"
+	authority="auth_oligarchic"
+	government="gov_science_directorate"
+	advisor_voice_type="l_materialist"
 	planet_name="Beowulf"
 	planet_class="pc_continental"
 	system_name="Sigma Draconis"
-	initializer="beowulf_system_initializer"
-	graphical_culture="mammalian_01"
-	city_graphical_culture="mammalian_01"
-
-	flags = { beowulf custom_start_screen }
-
+	initializer=""
+	graphical_culture="humanoid_01"
+	city_graphical_culture="reptilian_01"
 	empire_flag={
 		icon={
 			category="human"
@@ -43,16 +45,19 @@
 		name="Chyang Benton-Ramirez"
 		portrait="human_male_02"
 		texture=0
-		hair=5
-		clothes=4
-		ruler_title="CEO"
+		hair=7
+		clothes=1
+		ruler_title="Chairman"
+		leader_class="ruler"
 	}
-	spawn_enabled=always
-	ethic="ethic_individualist"
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+	room="machine_room"
+	spawn_enabled=yes
+	ethic="ethic_egalitarian"
 	ethic="ethic_fanatic_materialist"
-	trait="trait_intelligent"
-	trait="trait_slow_breeders"
-	trait="trait_communal"
-	trait="trait_natural_sociologists"
-	trait="trait_weak"
+	civics={
+		"civic_technocracy"
+		"civic_efficient_bureaucracy"
+	}
 }
