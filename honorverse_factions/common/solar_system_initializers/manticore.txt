@@ -22,20 +22,129 @@ manticore_system_initializer = {
 
 	planet = {
 			count = 1
-			class = "pc_g"
+			class = "pc_g_star"
 			name = "Manticore A"
-			orbit_distance = 0
+			orbit_distance = 280
 			orbit_angle = 0
 			size = { min = 30 max = 35 }
 			has_ring = no
+
+			planet = {
+				count = 1
+				orbit_distance = 15
+				class = "pc_molten"
+				name = "Salamander"
+				size = { min = 5 max = 10 }
+				orbit_angle = { min = 90 max = 270 }
+			}
+
+			planet = {
+				count = 1
+				orbit_distance = 15
+				class = "pc_molten"
+				name = "Phoenix"
+				size = { min = 5 max = 10 }
+				orbit_angle = { min = 90 max = 270 }
+			}
+
+			planet = {
+				count = 1
+				orbit_distance = 15
+				class = "pc_molten"
+				name = "Salamander"
+				size = { min = 5 max = 10 }
+				orbit_angle = { min = 90 max = 270 }
+			}
+
+			planet = {
+				count = 1
+				orbit_distance = 20
+				home_planet = yes
+				class = ideal_planet_class
+				name = "Manticore"
+				orbit_angle = { min = 90 max = 270 }
+				size = { min = 16 max = 20 }
+				deposit_blockers = none
+				modifiers = none
+
+				init_effect = {
+					prevent_anomaly = yes
+				}
+
+				init_effect = {
+					generate_empire_home_planet = yes
+				}
+
+				change_orbit = @base_moon_distance
+
+				moon = {
+					count = 1
+					class = random_non_colonizable
+					name = "Thorson"
+					orbit_angle = { min = 90 max = 270 }
+					orbit_distance = 5
+				}
+			}
+
+			planet = {
+				count = 1
+				orbit_distance = 15
+				class = "pc_continental"
+				name = "Sphinx"
+				size = { min = 20 max = 25 }
+				orbit_angle = { min = 90 max = 270 }
+
+				change_orbit = @base_moon_distance
+
+				moon = {
+					count = 1
+					name = "Perseus"
+					orbit_angle = { min = 90 max = 270 }
+					orbit_distance = 5
+				}
+
+				moon = {
+					count = 1
+					name = "Bellerophon"
+					orbit_angle = { min = 90 max = 270 }
+					orbit_distance = 5
+				}
+			}
+
+			planet = {
+				count = 1
+				class = "pc_gas_giant"
+				name = "Draco"
+				orbit_angle = { min = 90 max = 270 }
+				orbit_distance = 25
+			}
+
+			planet = {
+				count = 1
+				class = "pc_gas_giant"
+				name = "Roc"
+				orbit_angle = { min = 90 max = 270 }
+				orbit_distance = 25
+			}
+
+			planet = {
+				count = 1
+				class = "pc_gas_giant"
+				name = "Wyvern"
+				orbit_angle = { min = 90 max = 270 }
+				orbit_distance = 25
+
+			}
 	}
 
+	change_orbit = -245
+	
 	planet = {
 		count = 1
-		class = "pc_g"
+		class = "pc_g_star"
 		name = "Manticore B"
 		orbit_distance = 280
-		orbit_angle = { min = 0 max = 360 }
+		orbit_angle = 180
 		size = { min = 15 max = 25 }
 		has_ring = no
 
@@ -132,15 +241,6 @@ manticore_system_initializer = {
 			size = 20
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 25
-			satellite_naming_policy = lower_case_latin_letters
-
-		  change_orbit = @base_moon_distance
-
-			 moon = {
-				count = 11
-				orbit_angle = { min = 90 max = 270 }
-				orbit_distance = 5
-			 }
 	  }
 
 		asteroid_belt = {
@@ -155,147 +255,11 @@ manticore_system_initializer = {
 			name = "Fenris"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 25
-			satellite_naming_policy = lower_case_latin_letters
 
-			 change_orbit = @base_moon_distance
-
-			 moon = {
-				count = 7
-				orbit_angle = { min = 90 max = 270 }
-				orbit_distance = 5
-			 }
 		}
 
 	}
 
-	change_orbit = -245
-
-	planet = {
-		count = 1
-		orbit_distance = 15
-		class = "pc_molten"
-		name = "Salamander"
-		size = { min = 5 max = 10 }
-		orbit_angle = { min = 90 max = 270 }
-	}
-
-	planet = {
-		count = 1
-		orbit_distance = 15
-		class = "pc_molten"
-		name = "Phoenix"
-		size = { min = 5 max = 10 }
-		orbit_angle = { min = 90 max = 270 }
-	}
-
-	planet = {
-		count = 1
-		orbit_distance = 15
-		class = "pc_molten"
-		name = "Salamander"
-		size = { min = 5 max = 10 }
-		orbit_angle = { min = 90 max = 270 }
-	}
-
-	planet = {
-		count = 1
-		orbit_distance = 20
-		home_planet = yes
-		class = ideal_planet_class
-		name = "Manticore"
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 16 max = 20 }
-		deposit_blockers = none
-		modifiers = none
-
-		init_effect = {
-			prevent_anomaly = yes
-		}
-
-		init_effect = {
-			generate_empire_home_planet = yes
-		}
-
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = 1
-			class = random_non_colonizable
-			name = "Thorson"
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-
-	planet = {
-		count = 1
-		orbit_distance = 15
-		class = "pc_continental"
-		name = "Sphinx"
-		size = { min = 20 max = 25 }
-		orbit_angle = { min = 90 max = 270 }
-
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = 1
-			name = "Perseus"
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-
-		moon = {
-			count = 1
-			name = "Bellerophon"
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-
-	planet = {
-		count = 1
-		class = "pc_gas_giant"
-		name = "Draco"
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = 25
-		satellite_naming_policy = lower_case_latin_letters
-
-		 change_orbit = @base_moon_distance
-
-		 moon = {
-			count = 7
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		 }
-	}
-
-	planet = {
-		count = 1
-		class = "pc_gas_giant"
-		name = "Roc"
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = 25
-		satellite_naming_policy = lower_case_latin_letters
-
-		 change_orbit = @base_moon_distance
-
-		 moon = {
-			count = 9
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		 }
-	}
-
-	planet = {
-		count = 1
-		class = "pc_gas_giant"
-		name = "Wyvern"
-		orbit_angle = { min = 90 max = 270 }
-		orbit_distance = 25
-		satellite_naming_policy = lower_case_latin_letters
-
-		 change_orbit = @base_moon_distance
-	}
 
 
 	neighbor_system = {

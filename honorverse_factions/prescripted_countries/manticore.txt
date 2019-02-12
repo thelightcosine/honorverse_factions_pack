@@ -22,7 +22,7 @@
 	planet_name="Manticore"
 	planet_class="pc_continental"
 	system_name="Manticore"
-	initializer=""
+	initializer="manticore_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="mammalian_01"
 	empire_flag={
