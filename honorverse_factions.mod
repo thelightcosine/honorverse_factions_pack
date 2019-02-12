@@ -1,9 +1,10 @@
 name="Honorverse Factions Pack"
 path="mod/honorverse_factions"
 tags={
-	"Species"
-	"Galaxy Generation"
 	"Technologies"
+	"Galaxy Generation"
+	"Species"
 }
+picture="cover.jpg"
 remote_file_id="787884069"
-supported_version="1.3.*"
+supported_version="2.2.4"
