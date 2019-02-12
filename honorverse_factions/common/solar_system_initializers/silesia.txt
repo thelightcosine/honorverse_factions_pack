@@ -1,6 +1,6 @@
 silesia_system_initializer = {
 	name = "Silesia"
-	
+
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 75
@@ -77,4 +77,1716 @@ silesia_system_initializer = {
 			count = { min= 0 max = 4 }
 		}
 	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "hume_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "telmach_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 30 max = 100 }
+		initializer = "walther_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "arendscheldt_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "sachsen_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "horus_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "melchor_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "saginaw_system_initializer"
+	}
+}
+
+hume_system_initializer = {
+	name = "Hume"
+	class = "sc_g"
+
+	planet = {
+		name = "Hume"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_deposit = d_energy_4
+			create_pirate_country = yes
+			event_target:pirate_country = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = pirate_power
+						}
+					}
+					add_modifier = {
+						modifier = pirate_power
+						days = -1
+					}
+				}
+			}
+			every_country = {
+				establish_communications_no_message = event_target:pirate_country
+			}
+
+			create_fleet = {
+				name = "NAME_Raiding_Party"
+				effect = {
+					set_owner = event_target:pirate_country
+					create_ship_design = {
+						design = "NAME_Reaver"
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 100
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 150
+					set_fleet_flag = pirate_home_system_fleet
+					save_global_event_target_as = young_blood
+				}
+			}
+		}
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		name = "Jeremiah"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+}
+
+telmach_system_initializer = {
+	name = "Telmach"
+	class = "sc_g"
+
+	planet = {
+		name = "Telmach"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		name = "Telmach"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+}
+
+walther_system_initializer = {
+	name = "Walther"
+	class = "sc_g"
+
+	planet = {
+		name = "Walther"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_deposit = d_energy_4
+			create_pirate_country = yes
+			event_target:pirate_country = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = pirate_power
+						}
+					}
+					add_modifier = {
+						modifier = pirate_power
+						days = -1
+					}
+				}
+			}
+			every_country = {
+				establish_communications_no_message = event_target:pirate_country
+			}
+
+			create_fleet = {
+				name = "NAME_Volsung_Mercenaries"
+				effect = {
+					set_owner = event_target:pirate_country
+					set_fleet_flag = pirate_home_system_fleet
+					create_ship_design = {
+						design = "NAME_Reaver"
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 3
+						create_ship = {
+							name = random
+							design = "NAME_Corsair"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 3
+						create_ship = {
+							name = random
+							design = "NAME_Marauder"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							name = random
+							design = "NAME_Black_Earl"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = "NAME_Skull"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_fleet_flag = pirate_home_system_fleet
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 120
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		name = "Walther Prime"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+}
+
+arendscheldt_system_initializer = {
+	name = "Arendscheldt"
+	class = "sc_g"
+
+	planet = {
+		name = "Arendscheldt"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		name = "Central"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+}
+
+sachsen_system_initializer = {
+	name = "Sachsen"
+	class = "sc_g"
+
+	planet = {
+		name = "Sachsen"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		name = "Sachsen"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+}
+
+horus_system_initializer = {
+	name = "Horus"
+	class = "sc_g"
+
+	planet = {
+		name = "Horus"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		name = "Osiris"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+}
+
+melchor_system_initializer = {
+	name = "Melchor"
+	class = "sc_g"
+
+	flags = { pirate_home_system pirate_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 55
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 85
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 110
+	}
+
+	planet = {
+		name = "Melchor"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_deposit = d_energy_4
+			create_pirate_country = yes
+			event_target:pirate_country = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = pirate_power
+						}
+					}
+					add_modifier = {
+						modifier = pirate_power
+						days = -1
+					}
+				}
+			}
+			every_country = {
+				establish_communications_no_message = event_target:pirate_country
+			}
+
+			create_fleet = {
+				name = "NAME_Raiding_Party"
+				effect = {
+					set_owner = event_target:pirate_country
+					create_ship_design = {
+						design = "NAME_Reaver"
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 100
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 150
+					set_fleet_flag = pirate_home_system_fleet
+					save_global_event_target_as = young_blood
+				}
+			}
+		}
+	}
+
+	planet = {
+		count = 2
+		class = "pc_molten"
+		orbit_distance = 20
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 15
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		name = "Osiris"
+		class = "pc_continental"
+		orbit_distance = 15
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 15
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		count = 1
+		class = random_non_colonizable
+		orbit_distance = 20
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 5
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		count = 3
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "marsh_system_initializer"
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "hyperion_system_initializer"
+	}
+}
+
+saginaw_system_initializer = {
+	name = "Saginaw"
+	class = "sc_g"
+
+	planet = {
+		name = "Saginaw"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		name = "Jasper"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+}
+
+marsh_system_initializer = {
+	name = "Marsh"
+	class = "sc_g"
+
+	planet = {
+		name = "Marsh"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_deposit = d_energy_4
+			create_pirate_country = yes
+			event_target:pirate_country = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = pirate_power
+						}
+					}
+					add_modifier = {
+						modifier = pirate_power
+						days = -1
+					}
+				}
+			}
+			every_country = {
+				establish_communications_no_message = event_target:pirate_country
+			}
+
+			create_fleet = {
+				name = "NAME_Scarred_Veterans"
+				effect = {
+					set_owner = event_target:pirate_country
+					set_fleet_flag = pirate_home_system_fleet
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Corsair"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							name = random
+							design = "NAME_Marauder"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							name = random
+							design = "NAME_Black_Earl"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							design = "NAME_Skull"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_fleet_flag = pirate_home_system_fleet
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 120
+					}
+				}
+			}
+
+			create_fleet = {
+				name = "NAME_Young_Blood"
+				effect = {
+					set_owner = event_target:pirate_country
+					create_ship_design = {
+						design = "NAME_Reaver"
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 200
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 150
+					set_fleet_flag = pirate_home_system_fleet
+					save_global_event_target_as = young_blood
+				}
+			}
+
+			create_fleet = {
+				name = "NAME_Raiding_Party"
+				effect = {
+					set_owner = event_target:pirate_country
+					create_ship_design = {
+						design = "NAME_Reaver"
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 100
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 150
+					set_fleet_flag = pirate_home_system_fleet
+					save_global_event_target_as = young_blood
+				}
+			}
+		}
+	}
+
+	planet = {
+		count = { min = 1 max = 2 }
+		class = "pc_molten"
+		orbit_distance = { min = 10 max = 20 }
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		name = "Sidemore"
+		class = "pc_continental"
+		orbit_distance = 30
+		orbit_angle = 45
+		size = { min = 10 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 2 max = 5 }
+		class = random_non_colonizable
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+}
+
+hyperion_system_initializer = {
+	name = "Hyperion"
+	class = "sc_g"
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 55
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 85
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 110
+	}
+
+	planet = {
+		name = "Hyperion"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 10
+		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
+
+	}
+
+	planet = {
+		count = 2
+		class = "pc_molten"
+		orbit_distance = 20
+		size = { min = 8 max = 12 }
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 15
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 30
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		count = 1
+		class = random_non_colonizable
+		orbit_distance = 20
+		size = { min = 10 max = 25 }
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 5
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+
+		init_effect = {
+			random_list = {
+				50 = {
+					random_list = {
+						10 = { add_deposit = d_minerals_2 }
+						10 = { add_deposit = d_minerals_3 }
+						10 = { add_deposit = d_minerals_4 }
+						10 = { add_deposit = d_minerals_5 }
+						10 = { add_deposit = d_minerals_6 }
+						10 = { add_deposit = d_minerals_7 }
+						10 = { add_deposit = d_minerals_8 }
+					}
+				}
+				20 = {
+					random_list = {
+						50 = { add_deposit = d_alloys_1 }
+						30 = { add_deposit = d_alloys_2 }
+						10 = { add_deposit = d_alloys_3 }
+						5 = { add_deposit = d_alloys_4 }
+						5 = { add_deposit = d_alloys_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_rare_crystals_1 }
+						30 = { add_deposit = d_rare_crystals_2 }
+						10 = { add_deposit = d_rare_crystals_3 }
+						5 = { add_deposit = d_rare_crystals_4 }
+						5 = { add_deposit = d_rare_crystals_5 }
+					}
+				}
+				15 = {
+					random_list = {
+						50 = { add_deposit = d_volatile_motes_1 }
+						30 = { add_deposit = d_volatile_motes_2 }
+						10 = { add_deposit = d_volatile_motes_3 }
+						5 = { add_deposit = d_volatile_motes_4 }
+						5 = { add_deposit = d_volatile_motes_5 }
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		count = 3
+		class = "pc_gas_giant"
+		orbit_distance = { min = 15 max = 25 }
+		size = { min = 10 max = 25 }
+	}
+
 }
