@@ -25,6 +25,7 @@
 	initializer="erewhon_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="mammalian_01"
+	flags = { erewhon custom_start_screen }
 	empire_flag={
 		icon={
 			category="pointy"
@@ -54,7 +55,7 @@
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="default_room"
-	spawn_enabled=yes
+	spawn_enabled=always
 	ethic="ethic_xenophile"
 	ethic="ethic_fanatic_materialist"
 	civics={

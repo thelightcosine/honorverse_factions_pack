@@ -24,6 +24,7 @@
 	initializer="haven_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="humanoid_01"
+	flags = { haven custom_start_screen }
 	empire_flag={
 		icon={
 			category="ornate"
@@ -53,7 +54,7 @@
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="default_room"
-	spawn_enabled=yes
+	spawn_enabled=always
 	ethic="ethic_authoritarian"
 	ethic="ethic_militarist"
 	ethic="ethic_materialist"

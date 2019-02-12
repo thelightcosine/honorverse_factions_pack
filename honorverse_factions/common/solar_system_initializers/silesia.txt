@@ -588,6 +588,22 @@ melchor_system_initializer = {
 							graphical_culture = "pirate_01"
 						}
 					}
+					while = {
+						count = 3
+						create_ship = {
+							name = random
+							design = "NAME_Corsair"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 3
+						create_ship = {
+							name = random
+							design = "NAME_Marauder"
+							graphical_culture = "pirate_01"
+						}
+					}
 					set_location = {
 						target = prev
 						distance = 90

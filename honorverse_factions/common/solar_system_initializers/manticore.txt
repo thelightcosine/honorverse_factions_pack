@@ -134,8 +134,6 @@ manticore_system_initializer = {
 					add_deposit = d_alien_pets_deposit
 					add_deposit = d_alien_pets_deposit
 					add_deposit = d_alien_pets_deposit
-					add_deposit = d_betharian_deposit
-				  add_deposit = d_dust_caverns
 					add_deposit = d_fertile_lands
 					add_deposit = d_rich_mountain
 					add_deposit = d_massive_glacier
@@ -362,6 +360,8 @@ basilisk_system_initializer = {
 		has_ring = no
 
 		init_effect = {
+			add_deposit = d_betharian_deposit
+			add_deposit = d_dust_caverns
 			add_deposit = d_great_river
 			add_deposit = d_great_river
 			add_deposit = d_prosperous_mesa

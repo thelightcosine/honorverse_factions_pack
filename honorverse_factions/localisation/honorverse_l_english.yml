@@ -27,8 +27,11 @@
  zanzibar_system_initializer_NAME:0 "Zanzibar system"
  zanzibar_system_initializer_DESC:0 "The Zanzibar System"
  silesia_system_initializer_NAME:0 "Silesia System"
- silesia_system_initializer_DESC:0 "The silesia System"
-
+ silesia_system_initializer_DESC:0 "The Silesia System"
+ darius_system_initializer_NAME:0 "Darius System"
+ darius_system_initializer_DESC:0 "The Darius System"
+ congo_system_initializer_NAME:0 "Congo System"
+ congo_system_initializer_DESC:0 "The Congo System"
  #
  # Technologies
  #
@@ -54,3 +57,5 @@
  START_SCREEN_andermani:0 "The Andermani Empire was founded by Gustav Anderman, a highly successful mercenary. During one of his operations, he came across the planet Kuan Yin. The planet had a native microorganism that proved deadly to terrestrial crops. Anderman brought in modern microbiologists and genetic engineers to produce crops which were immune to the microorganisms, saving the people of Kuan Yin, who were quite willing to accept him as Emperor. The planet was officially renamed Potsdam. With this highly loyal population base, the Andermani Empire was born."
  START_SCREEN_haven:0 "During its first centuries of existence, the Republic of Haven was one of the most prosperous human worlds in the galaxy, and was viewed as a sort of "interstellar Athens." Considering the poverty of its less favored citizens an aberration in light of Haven's prosperity, the Havenite government launched welfare measures which, after a few centuries, became a caricature of a welfare state."
  START_SCREEN_beowulf:0 "The Republic of Beowulf was a small star nation and a founding member of the Solarian League. It consisted of the Sigma Draconis System and its planets, most importantly Beowulf, one of the first human colonies in outer space."
+ START_SCREEN_torch:0 "The Kingdom of Torch was an independent star nation established by former Manpower slaves on the planet Torch, formerly known as Congo, in the year 1919 PD."
+ START_SCREEN_manpower:0 "Manpower was originally founded by Leonard Detweiler of Beowulf under the name Detweiler Consortium. In the 15th Century PD, after Detweiler and his followers had migrated to the Mesa System through the Visigoth Wormhole, he renamed the consortium Manpower, Incorporated, mostly to put a thumb in the eye to the anti-human engineering establishment on Beowulf."

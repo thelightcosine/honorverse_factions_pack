@@ -25,6 +25,7 @@
 	initializer="mesa_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="reptilian_01"
+	flags = { manpower custom_start_screen }
 	empire_flag={
 		icon={
 			category="domination"
@@ -55,7 +56,7 @@
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="default_room"
-	spawn_enabled=yes
+	spawn_enabled=always
 	ethic="ethic_authoritarian"
 	ethic="ethic_fanatic_materialist"
 	civics={

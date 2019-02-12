@@ -25,6 +25,7 @@
 	initializer="silesia_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="mammalian_01"
+	flags = { silesia custom_start_screen }
 	empire_flag={
 		icon={
 			category="zoological"
@@ -54,7 +55,7 @@
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="personality_fanatic_befrienders_room"
-	spawn_enabled=yes
+	spawn_enabled=always
 	ethic="ethic_egalitarian"
 	ethic="ethic_fanatic_materialist"
 	civics={

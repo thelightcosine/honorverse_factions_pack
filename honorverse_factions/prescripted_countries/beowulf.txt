@@ -24,6 +24,7 @@
 	initializer="beowulf_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="reptilian_01"
+	flags = { beowulf custom_start_screen }
 	empire_flag={
 		icon={
 			category="human"
@@ -53,7 +54,7 @@
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="machine_room"
-	spawn_enabled=yes
+	spawn_enabled=always
 	ethic="ethic_egalitarian"
 	ethic="ethic_fanatic_materialist"
 	civics={

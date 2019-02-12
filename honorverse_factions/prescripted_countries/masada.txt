@@ -26,6 +26,7 @@
 	initializer="endicott_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="humanoid_01"
+	flags = { masada custom_start_screen }
 	empire_flag={
 		icon={
 			category="domination"
@@ -55,7 +56,7 @@
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="personality_spiritual_seekers_room"
-	spawn_enabled=yes
+	spawn_enabled=always
 	ethic="ethic_fanatic_xenophobe"
 	ethic="ethic_spiritualist"
 	civics={
