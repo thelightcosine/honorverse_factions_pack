@@ -1,7 +1,8 @@
 # Manticore Binary Star System
-# Due to the way I had to make the binary star work I couldn't add the moons for Manticore
-# Sphinx, or Gorgon. I also couldn't find a way to do all three of Manticore B's
-# asteroid belts, so I've left them out for now. Hopefully, I can find a better way to do this.
+# Due to technical limitations the moons have been left off from the Gas Giants
+# as adding all of them in causes rendering issues which make several orbital tracks
+# dissapear.
+# Also, the system is clearly not to scale, also due to technical constraints
 
 manticore_system_initializer = {
 	name = "Manticore System"
@@ -20,11 +21,39 @@ manticore_system_initializer = {
 		generate_home_system_resources = yes
 	}
 
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		name = "Unicorn Belt"
+		radius = 140
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		name = "Nibelung Belt"
+		radius = 155
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		name = "Gorgon Belt"
+		radius = 190
+	}
+
+	planet = {
+		count = 1
+		class = "pc_g_star"
+		name = "Manticore B"
+		orbit_distance = 0
+		orbit_angle = 180
+		size = { min = 15 max = 25 }
+		has_ring = no
+	}
+
 	planet = {
 			count = 1
 			class = "pc_g_star"
 			name = "Manticore A"
-			orbit_distance = 280
+			orbit_distance = 355
 			orbit_angle = 0
 			size = { min = 30 max = 35 }
 			has_ring = no
@@ -75,11 +104,18 @@ manticore_system_initializer = {
 					generate_empire_home_planet = yes
 				}
 
+				init_effect = {
+					add_deposit = d_fertile_lands
+					add_deposit = d_fertile_lands
+					add_deposit = d_geothermal_vent
+					add_deposit = d_geothermal_vent
+				}
+
 				change_orbit = @base_moon_distance
 
 				moon = {
 					count = 1
-					class = random_non_colonizable
+					class = "pc_barren"
 					name = "Thorson"
 					orbit_angle = { min = 90 max = 270 }
 					orbit_distance = 5
@@ -94,11 +130,24 @@ manticore_system_initializer = {
 				size = { min = 20 max = 25 }
 				orbit_angle = { min = 90 max = 270 }
 
+				init_effect = {
+					add_deposit = d_alien_pets_deposit
+					add_deposit = d_alien_pets_deposit
+					add_deposit = d_alien_pets_deposit
+					add_deposit = d_betharian_deposit
+				  add_deposit = d_dust_caverns
+					add_deposit = d_fertile_lands
+					add_deposit = d_rich_mountain
+					add_deposit = d_massive_glacier
+					add_deposit = d_massive_glacier
+				}
+
 				change_orbit = @base_moon_distance
 
 				moon = {
 					count = 1
 					name = "Perseus"
+					class = "pc_barren"
 					orbit_angle = { min = 90 max = 270 }
 					orbit_distance = 5
 				}
@@ -106,9 +155,11 @@ manticore_system_initializer = {
 				moon = {
 					count = 1
 					name = "Bellerophon"
+					class = "pc_barren"
 					orbit_angle = { min = 90 max = 270 }
 					orbit_distance = 5
 				}
+
 			}
 
 			planet = {
@@ -117,6 +168,7 @@ manticore_system_initializer = {
 				name = "Draco"
 				orbit_angle = { min = 90 max = 270 }
 				orbit_distance = 25
+
 			}
 
 			planet = {
@@ -125,6 +177,7 @@ manticore_system_initializer = {
 				name = "Roc"
 				orbit_angle = { min = 90 max = 270 }
 				orbit_distance = 25
+
 			}
 
 			planet = {
@@ -137,128 +190,112 @@ manticore_system_initializer = {
 			}
 	}
 
-	change_orbit = -245
-	
-	planet = {
-		count = 1
-		class = "pc_g_star"
-		name = "Manticore B"
-		orbit_distance = 280
-		orbit_angle = 180
-		size = { min = 15 max = 25 }
-		has_ring = no
+	change_orbit = -355
 
-		change_orbit = 25
-
-		 planet = {
-				count = 1
-				class = "pc_molten"
-				name = "Erinye"
-				size = { min = 5 max = 10 }
-				orbit_angle = { min = 90 max = 270 }
-				orbit_distance = 25
-		 }
-
-		 planet = {
-				count = 1
-				class = "pc_molten"
-				name = "Gorgon"
-				size = { min = 5 max = 10 }
-				orbit_angle = { min = 90 max = 270 }
-				orbit_distance = 25
-				satellite_naming_policy = lower_case_latin_letters
-
-        change_orbit = @base_moon_distance
-
-        moon = {
-    	    count = 1
-    	    orbit_angle = { min = 90 max = 270 }
-    	    orbit_distance = 5
-    	  }
-		 }
-
-		 planet = {
-			 count = 1
-			 class = "pc_toxic"
-			 name = "Aphrodite"
-			 size = 20
-			 orbit_angle = { min = 90 max = 270 }
-			 orbit_distance = 25
-			 satellite_naming_policy = lower_case_latin_letters
-
-				change_orbit = @base_moon_distance
-
-				moon = {
-				 count = 2
-				 orbit_angle = { min = 90 max = 270 }
-				 orbit_distance = 5
-			 }
-		}
-
-		planet = {
+	 planet = {
 			count = 1
-			class = "pc_barren"
-			name = "Damocles"
-			size = 20
+			class = "pc_molten"
+			name = "Erinye"
+			size = { min = 5 max = 10 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 25
 	 }
 
-
 	 planet = {
 			count = 1
-			class = "pc_alpine"
-			name = "Gryphon"
-			size = 22
+			class = "pc_molten"
+			name = "Gorgon"
+			size = { min = 5 max = 10 }
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 25
-  	  change_orbit = @base_moon_distance
+			satellite_naming_policy = lower_case_latin_letters
 
-			 moon = {
-				count = 1
-				name = "Egg"
-				orbit_angle = { min = 90 max = 270 }
-				orbit_distance = 5
-			}
-	  }
+      change_orbit = @base_moon_distance
 
-		asteroid_belt = {
-			type = rocky_asteroid_belt
-			name = "Unicorn Belt"
-			radius = 60
+      moon = {
+  	    count = 1
+				class = "pc_barren"
+  	    orbit_angle = { min = 90 max = 270 }
+  	    orbit_distance = 5
+  	  }
+	 }
+
+	 planet = {
+		 count = 1
+		 class = "pc_toxic"
+		 name = "Aphrodite"
+		 size = 20
+		 orbit_angle = { min = 90 max = 270 }
+		 orbit_distance = 25
+		 satellite_naming_policy = lower_case_latin_letters
+
+			change_orbit = @base_moon_distance
+
+			moon = {
+			 count = 2
+			 class = "pc_barren"
+			 orbit_angle = { min = 90 max = 270 }
+			 orbit_distance = 5
+		 }
+	}
+
+	planet = {
+		count = 1
+		class = "pc_barren"
+		name = "Damocles"
+		size = 20
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 25
+ }
+
+
+ planet = {
+		count = 1
+		class = "pc_continental"
+		name = "Gryphon"
+		size = 22
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 25
+
+		init_effect = {
+			add_deposit = d_fuming_bog
+			add_deposit = d_fuming_bog
+			add_deposit = d_crystalline_caverns
+			add_deposit = d_rich_mountain
+			add_deposit = d_rich_mountain
+			add_deposit = d_mountain_range
+			add_deposit = d_mountain_range
 		}
 
-		asteroid_belt = {
-			type = rocky_asteroid_belt
-			name = "Nibelung Belt"
-			radius = 90
-		}
+	  change_orbit = @base_moon_distance
 
-		planet = {
+		 moon = {
 			count = 1
-			class = "pc_gas_giant"
-			name = "Titan"
-			size = 20
+			name = "Egg"
+			class = "pc_barren"
 			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 25
-	  }
-
-		asteroid_belt = {
-			type = rocky_asteroid_belt
-			name = "Gorgon Belt"
-			radius = 120
+			orbit_distance = 5
 		}
+  }
 
-		planet = {
-			count = 1
-			class = "pc_gas_giant"
-			name = "Fenris"
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 25
+	planet = {
+		count = 1
+		class = "pc_gas_giant"
+		name = "Titan"
+		size = 20
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 45
+  }
 
-		}
+	planet = {
+		count = 1
+		class = "pc_gas_giant"
+		name = "Fenris"
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 35
 
 	}
+
 
 
 
@@ -323,7 +360,92 @@ basilisk_system_initializer = {
 		orbit_angle = 90
 		size = { min = 18 max = 25 }
 		has_ring = no
-		modifiers = none
+
+		init_effect = {
+			add_deposit = d_great_river
+			add_deposit = d_great_river
+			add_deposit = d_prosperous_mesa
+			add_deposit = d_rich_mountain
+			add_deposit = d_dense_jungle
+			add_deposit = d_dense_jungle
+			add_deposit = d_mountain_range
+		}
+
+		init_effect = {
+			create_species = {
+					name = "Medusan"
+					plural = "Medusans"
+					class="ART"
+					portrait="art13"
+					homeworld = THIS
+					traits = {
+						trait="trait_nomadic"
+						trait="trait_conservational"
+						trait="trait_fleeting"
+						trait="trait_communal"
+					}
+				}
+				create_country = {
+					name = random
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+					species = last_created
+					ethos = {
+						ethic = "ethic_xenophobe"
+						ethic = "ethic_spiritualist"
+						ethic = "ethic_authoritarian"
+					}
+					flag = {
+						icon = {
+							category = "ornate"
+							file = "flag_ornate_11.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "00_solid.dds"
+						}
+						colors = {
+							"dark_blue"
+							"dark_blue"
+							"null"
+							"null"
+						}
+					}
+					day_zero_contact = no
+					type = primitive
+				}
+				last_created_country = {
+					set_graphical_culture = preindustrial_01
+					set_country_flag = bronze_age
+					set_primitive_age = bronze_age
+				}
+
+				set_owner = last_created_country
+
+				while = {
+					count = 10
+					create_pop = {
+						species = last_created
+					}
+				}
+				add_building = building_primitive_dwellings
+				add_building = building_primitive_dwellings
+				add_building = building_stone_palace
+
+				while = {
+					count = 3
+					create_army = {
+						name = "NAME_Feudal_Levies"
+						owner = last_created
+						species = last_created
+						type = "primitive_army"
+					}
+				}
+
+		}
 	}
 
 	planet = {
@@ -357,7 +479,7 @@ trevor_star_initializer = {
 
 	planet = {
 		name = "San Martin"
-		class = "pc_continental"
+		class = "pc_alpine"
 		orbit_distance = 25
 		orbit_angle = 90
 		size = { min = 18 max = 25 }
