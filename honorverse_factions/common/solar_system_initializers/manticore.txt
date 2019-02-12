@@ -7,7 +7,7 @@
 manticore_system_initializer = {
 	name = "Manticore System"
 	class = "rl_binary_starting_stars"
-	flags = { manticore_system }
+	flags = { manticore_system empire_home_system }
 	usage = custom_empire
 
 	init_effect = {

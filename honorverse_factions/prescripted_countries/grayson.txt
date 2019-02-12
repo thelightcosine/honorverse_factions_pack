@@ -23,7 +23,7 @@
 	planet_name="Grayson"
 	planet_class="pc_continental"
 	system_name="Yeltsin's Star"
-	initializer=""
+	initializer="yeltsin_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="humanoid_01"
 	empire_flag={

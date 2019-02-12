@@ -1,12 +1,26 @@
 new_berlin_system_initializer = {
 	name = "New Berlin"
 
-	asteroids_distance = 90
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 90
+	}
 
 	class = sc_g
 
-	flags = { new_berlin_system }
+	flags = { new_berlin_system empire_home_system }
 	usage = custom_empire
+
+	init_effect = {
+	every_neighbor_system = {
+		set_star_flag = empire_cluster
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+		}
+	}
+
+	generate_home_system_resources = yes
+}
 
 	planet = {
 		name = "New Berlin"
@@ -18,12 +32,12 @@ new_berlin_system_initializer = {
 	}
 
 	planet = {
-		count = { min = 1 max = 2 } 
+		count = { min = 1 max = 2 }
 		class = "pc_molten"
 		orbit_distance = { min = 10 max = 20 }
 		size = { min = 8 max = 12 }
 	}
-	
+
 	planet = {
 		name = "Potsdam"
 		class = "pc_continental"
@@ -32,137 +46,27 @@ new_berlin_system_initializer = {
 		size = { min = 16 max = 20 }
 		has_ring = no
 		home_planet = yes
-			tile_blockers = none
-			modifiers = none
-		
-			init_effect = {
-				prevent_anomaly = yes		
-			}
+		deposit_blockers = none
+		modifiers = none
 
-			init_effect = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
-					set_building = "building_capital_1"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}	
-					add_resource = {
-						resource = minerals
-						amount = 1
-					}					
-					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
-						set_building = "building_hydroponics_farm_1"
-						add_resource = {
-							resource = food
-							amount = 1
-							replace = yes
-						}						
-					}
-					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
-						set_building = "building_power_plant_1"
-						add_resource = {
-							resource = energy
-							amount = 1
-							replace = yes
-						}						
-					}
-					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
-						set_building = "building_power_plant_1"
-						add_resource = {
-							resource = energy
-							amount = 1
-							replace = yes
-						}						
-					}
-					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
-						set_building = "building_mining_network_1"
-						add_resource = {
-							resource = minerals
-							amount = 1
-							replace = yes
-						}						
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = engineering_research
-						amount = 1
-						replace = yes
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = society_research
-						amount = 1
-						replace = yes
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = physics_research
-						amount = 1
-						replace = yes
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_decrepit_dwellings"
-					add_resource = {
-						resource = energy
-						amount = 2
-						replace = yes
-					}					
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_decrepit_dwellings"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}					
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_decrepit_dwellings"
-					add_resource = {
-						resource = energy
-						amount = 1
-						replace = yes
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}				
-				}			
-			}	
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		init_effect = {
+			generate_empire_home_planet = yes
+		}
 	}
 
 	planet = {
-		count = { min = 2 max = 5 } 
+		count = { min = 2 max = 5 }
 		class = random_non_colonizable
 		orbit_distance = { min = 15 max = 25 }
 		size = { min = 10 max = 25 }
 	}
 
 	planet = {
-		count = { min = 1 max = 3 } 
+		count = { min = 1 max = 3 }
 		class = "pc_gas_giant"
 		orbit_distance = { min = 15 max = 25 }
 		size = { min = 10 max = 25 }
@@ -170,6 +74,11 @@ new_berlin_system_initializer = {
 		moon = {
 			count = { min= 0 max = 4 }
 		}
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 100 }
+		initializer = "durandel_system_initializer"
 	}
 
 	neighbor_system = {
@@ -208,8 +117,8 @@ durandel_system_initializer = {
 	}
 
 	planet = {
-		count = { min = 5 max = 12 } 
-		class = random	
+		count = { min = 5 max = 12 }
+		class = random
 	}
 
 }
@@ -228,8 +137,8 @@ nimbalkar_system_initializer = {
 	}
 
 	planet = {
-		count = { min = 5 max = 12 } 
-		class = random	
+		count = { min = 5 max = 12 }
+		class = random
 	}
 
 }
@@ -248,14 +157,14 @@ sligo_system_initializer = {
 		has_ring = no
 	}
 
-	
+
 	planet = {
-		count = { min = 1 max = 2 } 
+		count = { min = 1 max = 2 }
 		class = "pc_molten"
 		orbit_distance = { min = 10 max = 20 }
 		size = { min = 8 max = 12 }
 	}
-	
+
 	planet = {
 		name = "Erin"
 		class = "pc_continental"
@@ -266,14 +175,14 @@ sligo_system_initializer = {
 	}
 
 	planet = {
-		count = { min = 1 max = 3 } 
+		count = { min = 1 max = 3 }
 		class = random_non_colonizable
 		orbit_distance = { min = 15 max = 25 }
 		size = { min = 10 max = 25 }
 	}
 
 	planet = {
-		count = { min = 1 max = 2 } 
+		count = { min = 1 max = 2 }
 		class = "pc_gas_giant"
 		orbit_distance = { min = 15 max = 25 }
 		size = { min = 10 max = 25 }
@@ -281,14 +190,19 @@ sligo_system_initializer = {
 		moon = {
 			count = { min= 0 max = 4 }
 		}
-	}	
+	}
 }
 
 irrlicht_system_initializer = {
 	name = "Irrlicht"
 
 	class = sc_g
-	asteroids_distance = 50
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 50
+	}
+
 
 	planet = {
 		name = "Irrlicht"
@@ -302,20 +216,20 @@ irrlicht_system_initializer = {
 	change_orbit = 50
 
 	planet = {
-		count = { min = 2 max = 5 } 
+		count = { min = 2 max = 5 }
 		class = random_asteroid
 		orbit_distance = 0
 	}
-	
+
 	planet = {
-		count = { min = 1 max = 2 } 
+		count = { min = 1 max = 2 }
 		class = random_non_colonizable
 		orbit_distance = { min = 15 max = 25 }
 		size = { min = 10 max = 25 }
 	}
 
 	planet = {
-		count = { min = 1 max = 2 } 
+		count = { min = 1 max = 2 }
 		class = "pc_gas_giant"
 		orbit_distance = { min = 15 max = 25 }
 		size = { min = 10 max = 25 }
@@ -323,7 +237,7 @@ irrlicht_system_initializer = {
 		moon = {
 			count = { min= 0 max = 4 }
 		}
-	}	
+	}
 }
 
 gregor_system_initializer = {
@@ -331,24 +245,16 @@ gregor_system_initializer = {
 
 	class = sc_f
 
-	# The Barycenter for the Gregor Binary system
-	planet = {
-		name = "Gregor Barycenter"
-		orbit_distance = 0
-		orbit_angle = 1
-		size = 10
-		has_ring = no	
-	}
-
 	planet = {
 		name = "Gregor A"
 		class = "pc_f_star"
-		orbit_distance = 70
-		orbit_angle = 1
+		orbit_distance = 0
+		orbit_angle = 0
 		size = 10
 		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
 
-		moon = {
+		planet = {
 			count = { min = 3 max = 7}
 			class = random_non_colonizable
 		}
@@ -357,30 +263,27 @@ gregor_system_initializer = {
 	planet = {
 		name = "Gregor B"
 		class = "pc_f_star"
-		orbit_distance = 70
+		orbit_distance = 180
 		orbit_angle = 180
 		size = 10
 		has_ring = no
+		satellite_naming_policy = upper_case_roman_numerals
 
-		moon = {
+		planet = {
 			count = { min = 1 max = 3 }
 			class = "pc_molten"
 		}
 
-		moon = {
+		planet = {
 			name = "Gregor"
 			class = "pc_continental"
 			orbit_distance = 20
 			orbit_angle = 90
 			size = { min = 16 max = 25 }
 			has_ring = no
-			
-			init_effect = {
-				prevent_anomaly = yes
-			}	
 		}
 
-		moon = {
+		planet = {
 			count = { min = 1 max = 3 }
 			class = random_non_colonizable
 		}

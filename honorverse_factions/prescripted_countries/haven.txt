@@ -21,7 +21,7 @@
 	planet_name="Haven"
 	planet_class="pc_continental"
 	system_name="Haven"
-	initializer=""
+	initializer="haven_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="humanoid_01"
 	empire_flag={

@@ -22,7 +22,7 @@
 	planet_name="Zanzibar"
 	planet_class="pc_continental"
 	system_name="Zanzibar"
-	initializer=""
+	initializer="zanzibar_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="arthropoid_01"
 	empire_flag={

@@ -21,7 +21,7 @@
 	planet_name="Beowulf"
 	planet_class="pc_continental"
 	system_name="Sigma Draconis"
-	initializer=""
+	initializer="beowulf_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="reptilian_01"
 	empire_flag={

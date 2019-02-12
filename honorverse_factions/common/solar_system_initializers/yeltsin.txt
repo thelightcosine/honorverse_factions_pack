@@ -2,11 +2,28 @@
 
 yeltsin_system_initializer = {
 	name = "Yeltsin's Star"
-	
+
 	class = sc_f
-	asteroids_distance = 120
-	flags = { yeltsin_system }
-	usage = custom_empire		
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 120
+	}
+	
+	flags = { yeltsin_system empire_home_system }
+	usage = custom_empire
+
+	init_effect = {
+	every_neighbor_system = {
+		set_star_flag = empire_cluster
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+		}
+	}
+
+	generate_home_system_resources = yes
+}
+
 
 	planet = {
 		name = "Yeltsin's Star"
@@ -56,126 +73,16 @@ yeltsin_system_initializer = {
 		size = { min = 16 max = 20 }
 		has_ring = no
 		home_planet = yes
-			tile_blockers = none
-			modifiers = none
-		
-			init_effect = {
-				prevent_anomaly = yes		
-			}
+		deposit_blockers = none
+		modifiers = none
 
-			init_effect = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
-					set_building = "building_capital_1"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}	
-					add_resource = {
-						resource = minerals
-						amount = 1
-					}					
-					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
-						set_building = "building_hydroponics_farm_1"
-						add_resource = {
-							resource = food
-							amount = 1
-							replace = yes
-						}						
-					}
-					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
-						set_building = "building_power_plant_1"
-						add_resource = {
-							resource = energy
-							amount = 1
-							replace = yes
-						}						
-					}
-					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
-						set_building = "building_power_plant_1"
-						add_resource = {
-							resource = energy
-							amount = 1
-							replace = yes
-						}						
-					}
-					random_neighboring_tile = {
-						limit = { has_blocker = no has_building = no }
-						set_building = "building_mining_network_1"
-						add_resource = {
-							resource = minerals
-							amount = 1
-							replace = yes
-						}						
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = engineering_research
-						amount = 1
-						replace = yes
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = society_research
-						amount = 1
-						replace = yes
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_failing_infrastructure"
-					add_resource = {
-						resource = physics_research
-						amount = 1
-						replace = yes
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_toxic_kelp"
-					add_resource = {
-						resource = energy
-						amount = 2
-						replace = yes
-					}					
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_toxic_kelp"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}					
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = "tb_toxic_kelp"
-					add_resource = {
-						resource = energy
-						amount = 1
-						replace = yes
-					}				
-				}
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}				
-				}			
-			}	
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		init_effect = {
+			generate_empire_home_planet = yes
+		}
 	}
 
 	change_orbit = 32

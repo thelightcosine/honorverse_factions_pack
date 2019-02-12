@@ -21,7 +21,7 @@
 	planet_name="Potsdam"
 	planet_class="pc_continental"
 	system_name="New Berlin"
-	initializer=""
+	initializer="new_berlin_system_initializer"
 	graphical_culture="humanoid_01"
 	city_graphical_culture="mammalian_01"
 	empire_flag={
@@ -42,7 +42,7 @@
 	}
 	ruler={
 		gender=male
-		name="Gustav anderman"
+		name="Gustav Anderman"
 		portrait="human_male_02"
 		texture=0
 		hair=6
